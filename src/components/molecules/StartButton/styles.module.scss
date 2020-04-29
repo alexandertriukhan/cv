@@ -1,0 +1,16 @@
+.startButton {
+  display: flex;
+  align-items: center;
+  padding: 0 4px;
+  min-width: unset;
+
+  img {
+    height: 20px;
+  }
+
+  h5 {
+    margin: 0 0 0 4px;
+    font-size: 1.15em;
+  }
+
+}
