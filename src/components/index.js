@@ -1,12 +1,17 @@
 // Atoms
 import TimeBar from './atoms/TimeBar';
+import StartButton from './atoms/StartButton';
+import DialogBar from './atoms/DialogBar';
 
 // Molecules
-import StartButton from './molecules/StartButton';
 
 // Organisms
 import Taskbar from './organisms/Taskbar';
 import Desktop from './organisms/Desktop';
+
+// Templates
+import Dialog from './templates/Dialog';
+import DialogContainer from './templates/DialogContainer';
 
 // Pages
 import Main from './pages/Main';
@@ -14,11 +19,15 @@ import Main from './pages/Main';
 export {
   // Atoms
   TimeBar,
-  // Molecules
   StartButton,
+  DialogBar,
+  // Molecules
   // Organisms
   Taskbar,
   Desktop,
+  // Templates
+  Dialog,
+  DialogContainer,
   // Pages
   Main,
 };

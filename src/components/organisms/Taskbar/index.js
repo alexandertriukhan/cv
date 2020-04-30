@@ -1,6 +1,5 @@
 import React from 'react';
-import StartButton from '../../molecules/StartButton';
-import TimeBar from '../../atoms/TimeBar';
+import { DialogBar, StartButton, TimeBar } from '../../';
 import classNames from 'classnames';
 import styles from './styles.module.scss';
 
@@ -10,6 +9,7 @@ function Taskbar() {
       <div>
         <StartButton />
         <hr />
+        <DialogBar />
       </div>
       <div>
         <hr />

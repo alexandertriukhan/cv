@@ -11,7 +11,7 @@ function TimeBar() {
     }
   }, 1000);
 
-  return <div className={classes.timeBar}>{moment().format('A hh:mm')}</div>;
+  return <div className={classes.timeBar}>{currentTime}</div>;
 }
 
 export default TimeBar;

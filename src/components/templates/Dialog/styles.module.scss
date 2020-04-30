@@ -1,0 +1,7 @@
+.dialog {
+  position: absolute;
+
+  &_minimized {
+    visibility: hidden;
+  }
+}
