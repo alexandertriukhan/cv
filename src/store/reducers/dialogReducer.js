@@ -1,23 +1,30 @@
 import * as TYPES from '../actionTypes/dialogActionTypes';
+import { getDialog } from '../../components/molecules/HelloIcon';
 
 const initialState = {
-  dialogStack: [
-    {
-      dialogName: 'Hello!',
-      isMinimized: false,
-    },
-  ],
+  dialogStack: [getDialog],
   activeDialog: 'Hello!',
 };
 
 export default function dialogReducer(state = initialState, action) {
   switch (action.type) {
     case TYPES.OPEN_DIALOG:
-      return {
-        ...state,
-        dialogStack: [...state.dialogStack, { ...action.payload, isMinimized: false }],
-        activeDialog: action.payload.dialogName,
-      };
+      const dialogIndex = state.dialogStack.findIndex(
+        x => x.dialogName === action.payload.dialogName,
+      );
+      return dialogIndex !== -1
+        ? {
+            ...state,
+            dialogStack: Object.assign([...state.dialogStack], {
+              [dialogIndex]: { ...action.payload, isMinimized: false },
+            }),
+            activeDialog: action.payload.dialogName,
+          }
+        : {
+            ...state,
+            dialogStack: [...state.dialogStack, { ...action.payload, isMinimized: false }],
+            activeDialog: action.payload.dialogName,
+          };
 
     case TYPES.MINIMIZE_DIALOG:
       return {

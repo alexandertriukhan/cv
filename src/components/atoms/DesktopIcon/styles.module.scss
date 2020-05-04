@@ -1,0 +1,17 @@
+@import "../../../styles/constants/colors";
+@import "../../../styles/constants/sizes";
+
+.desktopIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  max-width: $desktop_icon;
+
+  span {
+    color: $white;
+    padding: 5px 10px;
+  }
+}

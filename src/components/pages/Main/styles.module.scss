@@ -2,19 +2,12 @@ $ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
 $ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
 $screen-background: #989898;
 
-@keyframes flicker {
-  $steps: 20;
-  @for $i from 0 through $steps {
-    #{percentage($i*(1/$steps))} {
-      opacity: random();
-    }
-  }
-}
-
 .main {
   position: relative;
   overflow: hidden;
   background: $screen-background;
+  width: 100vw;
+  height: 100vh;
 
   // flicker
   &::after {
@@ -29,7 +22,6 @@ $screen-background: #989898;
     opacity: 0;
     z-index: 2;
     pointer-events: none;
-    animation: flicker 0.15s infinite;
   }
   // scanlines
   &::before {

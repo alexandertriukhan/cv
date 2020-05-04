@@ -9,12 +9,13 @@ function DialogBar({ dialogStack, activeDialog, setActive }) {
     return classNames(styles.dialogButton, isActive && styles['dialogButton_active']);
   };
 
-  return dialogStack.map(({ dialogName }) => (
+  return dialogStack.map(({ icon, dialogName }) => (
     <button
       key={dialogName}
       onClick={() => setActive(dialogName)}
       className={modifyDialogButton(dialogName === activeDialog)}
     >
+      <img src={icon} alt="" />
       {dialogName}
     </button>
   ));

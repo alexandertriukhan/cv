@@ -1,5 +1,5 @@
 import React from 'react';
-import StartIcon from '../../../assets/images/startIcon.png';
+import StartIcon from '../../../assets/icons/start.png';
 import styles from './styles.module.scss';
 
 function StartButton({ onClick }) {

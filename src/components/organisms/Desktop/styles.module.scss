@@ -1,7 +1,12 @@
 @import '../../../styles/constants/colors';
+@import "../../../styles/constants/sizes";
 
 .desktop {
+  position: relative;
   background-color: $desktop_bg;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: calc(100% - 29px);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($desktop_icon, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax($desktop_icon, 1fr));
 }

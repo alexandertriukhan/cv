@@ -1,7 +1,23 @@
 .dialog {
   position: absolute;
 
-  &_minimized {
+  &--minimized {
     visibility: hidden;
+  }
+
+  &--maximized {
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+  }
+}
+
+.titleBarText {
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 16px;
+    height: 16px;
+    padding-right: 4px;
   }
 }
