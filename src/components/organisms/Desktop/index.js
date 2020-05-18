@@ -1,5 +1,5 @@
 import React from 'react';
-import { DialogContainer, RecycleBinIcon, MyPcIcon, HelloIcon } from '../../';
+import { DialogContainer, RecycleBinIcon, MyPcIcon, HelloIcon, MineSweeperIcon } from '../../';
 import styles from './styles.module.scss';
 
 function Desktop() {
@@ -9,6 +9,7 @@ function Desktop() {
       <MyPcIcon />
       <HelloIcon />
       <RecycleBinIcon />
+      <MineSweeperIcon />
     </div>
   );
 }

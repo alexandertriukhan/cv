@@ -8,10 +8,12 @@ import DesktopIcon from './atoms/DesktopIcon';
 import RecycleBinIcon from './molecules/RecycleBinIcon';
 import MyPcIcon from './molecules/MyPcIcon';
 import HelloIcon from './molecules/HelloIcon';
+import MineSweeperIcon from './molecules/MineSweeperIcon';
 
 // Organisms
 import Taskbar from './organisms/Taskbar';
 import Desktop from './organisms/Desktop';
+import MineSweeperGame from './organisms/MineSweeperGame';
 
 // Templates
 import Dialog from './templates/Dialog';
@@ -30,9 +32,11 @@ export {
   RecycleBinIcon,
   MyPcIcon,
   HelloIcon,
+  MineSweeperIcon,
   // Organisms
   Taskbar,
   Desktop,
+  MineSweeperGame,
   // Templates
   Dialog,
   DialogContainer,

@@ -1,14 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import HelpIconBig from '../../../assets/images/help.png';
 import HelpIconSmall from '../../../assets/icons/help.png';
 import { DesktopIcon } from '../../';
 import { openDialog } from '../../../store/actions/dialogActions';
+import { fetchTextData } from '../../../api';
+import yaml from 'js-yaml';
 
-const dialogName = 'Help.txt';
+const dialogName = 'Hello.txt';
 
 function HelloDialogContent() {
-  return <h1>Hello World!</h1>;
+  const [content, setContent] = useState();
+
+  useEffect(() => {
+    (async () => {
+      const contentYaml = await fetchTextData('hello.yaml')
+      setContent(yaml.safeLoad(contentYaml));
+    })();
+  }, []);
+
+  console.log(content)
+  return content ? (
+    <div className="dialog__body">
+      <h4>{content.heading}</h4>
+      <p>{content.content}</p>
+    </div>
+  ) : null;
 }
 
 export const getDialog = {

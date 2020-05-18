@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Dialog } from '../..';
 import { closeDialog, minimizeDialog, setActive } from '../../../store/actions/dialogActions';
 
-function DialogContainer({ dialogStack, closeDialog, minimizeDialog, setActive }) {
+function DialogContainer({ dialogStack, activeDialog, closeDialog, minimizeDialog, setActive }) {
   return dialogStack.map(({ icon, dialogName, isMinimized, children }) => (
     <Dialog
       icon={icon}
@@ -13,6 +13,7 @@ function DialogContainer({ dialogStack, closeDialog, minimizeDialog, setActive }
       onClose={closeDialog}
       onMinimize={minimizeDialog}
       isMinimized={isMinimized}
+      isActive={activeDialog === dialogName}
     >
       {children}
     </Dialog>
@@ -27,6 +28,7 @@ const mapDispatchToProps = {
 
 const mapStateToProps = state => ({
   dialogStack: state.dialogReducer.dialogStack,
+  activeDialog: state.dialogReducer.activeDialog,
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(DialogContainer);

@@ -1,0 +1,30 @@
+@import "src/styles/constants/colors";
+
+.mineSweeperTile {
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0;
+
+  > div {
+    display: none;
+    background-color: $bg_gray;
+    border: 1px dotted gray;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  img {
+    width: 12px;
+    height: 12px;
+  }
+
+  &--uncovered {
+
+    > div {
+      display: flex;
+    }
+  }
+}

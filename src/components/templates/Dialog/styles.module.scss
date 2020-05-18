@@ -1,5 +1,6 @@
 .dialog {
   position: absolute;
+  z-index: 1;
 
   &--minimized {
     visibility: hidden;
@@ -8,6 +9,10 @@
   &--maximized {
     width: calc(100% - 6px);
     height: calc(100% - 6px);
+  }
+
+  &--active {
+    z-index: 2;
   }
 }
 

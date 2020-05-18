@@ -11,6 +11,7 @@ function Dialog({
   onMinimize,
   onClose,
   isMinimized,
+  isActive,
   fullControl = true,
   maximizeOnStart = false,
 }) {
@@ -24,6 +25,7 @@ function Dialog({
       styles.dialog,
       isMinimized && styles['dialog--minimized'],
       isMaximized && styles['dialog--maximized'],
+      isActive && styles['dialog--active'],
     );
   }
 
