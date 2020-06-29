@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { fetchTextData } from '../../../api';
 import { Loader } from '../../';
 import sanitizeHtml from 'sanitize-html';
@@ -8,6 +9,12 @@ marked.setOptions({
   gfm: true,
   breaks: true,
 });
+
+/**
+ * Component make a request for markdown file and renders its content
+ *
+ * @param {string} mdFileName
+ */
 
 function DialogContent({ mdFileName }) {
   const [content, setContent] = useState();
@@ -21,7 +28,13 @@ function DialogContent({ mdFileName }) {
 
   return content ? (
     <div className="dialog__body" dangerouslySetInnerHTML={{ __html: sanitizeHtml(content) }} />
-  ) : <Loader />;
+  ) : (
+    <Loader />
+  );
 }
+
+DialogContent.propTypes = {
+  mdFileName: PropTypes.string,
+};
 
 export default DialogContent;

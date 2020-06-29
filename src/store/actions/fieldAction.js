@@ -6,7 +6,6 @@ export const setUncovered = (indexColumn, index) => ({
   index,
 });
 
-
 export const setField = payload => ({
   type: TYPES.SET_FIELD,
   payload,

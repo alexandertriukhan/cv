@@ -1,8 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { setActive } from '../../../store/actions/dialogActions';
 import classNames from 'classnames';
 import styles from './styles.module.scss';
+
+/**
+ * Component renders a list of open dialogs inside a TaskBar
+ *
+ * @param {array} dialogStack
+ * @param {string} activeDialog
+ * @param {function} setActive
+ */
 
 function DialogBar({ dialogStack, activeDialog, setActive }) {
   const modifyDialogButton = isActive => {
@@ -20,6 +29,12 @@ function DialogBar({ dialogStack, activeDialog, setActive }) {
     </button>
   ));
 }
+
+DialogBar.propTypes = {
+  dialogStack: PropTypes.array.isRequired,
+  activeDialog: PropTypes.string,
+  setActive: PropTypes.func,
+};
 
 const mapDispatchToProps = {
   setActive,

@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { MineSweeperGame } from '../../';
 import mineSweeperIcon from '../../../assets/images/minesweeper.png';
+import mineSweeperIconSmall from '../../../assets/icons/mine.png';
 import { DesktopIcon } from '../../';
 import { openDialog } from '../../../store/actions/dialogActions';
 
@@ -12,7 +13,7 @@ function MineSweeperDialogContent() {
 }
 
 export const getDialog = {
-  icon: mineSweeperIcon,
+  icon: mineSweeperIconSmall,
   dialogName: dialogName,
   children: <MineSweeperDialogContent />,
 };
