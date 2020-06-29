@@ -1,6 +1,15 @@
 @import "../constants/colors";
 
-.dialog__body {
-  background: $white;
-  padding: 10px;
+.window-body {
+  max-height: 80vh;
+  overflow-y: auto;
+
+  .dialog__body {
+    background: $white;
+    padding: 10px;
+    min-width: 200px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+  }
 }

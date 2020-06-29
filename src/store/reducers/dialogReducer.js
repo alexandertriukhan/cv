@@ -3,7 +3,7 @@ import { getDialog } from '../../components/molecules/HelloIcon';
 
 const initialState = {
   dialogStack: [getDialog],
-  activeDialog: 'Hello!',
+  activeDialog: getDialog.dialogName,
 };
 
 export default function dialogReducer(state = initialState, action) {

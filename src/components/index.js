@@ -3,6 +3,8 @@ import TimeBar from './atoms/TimeBar';
 import StartButton from './atoms/StartButton';
 import DialogBar from './atoms/DialogBar';
 import DesktopIcon from './atoms/DesktopIcon';
+import DialogContent from './atoms/DialogContent';
+import Loader from './atoms/Loader';
 
 // Molecules
 import RecycleBinIcon from './molecules/RecycleBinIcon';
@@ -28,6 +30,8 @@ export {
   StartButton,
   DialogBar,
   DesktopIcon,
+  DialogContent,
+  Loader,
   // Molecules
   RecycleBinIcon,
   MyPcIcon,

@@ -10,7 +10,7 @@
     "@testing-library/user-event": "^7.2.1",
     "classnames": "^2.2.6",
     "fetchz": "^2.0.1",
-    "js-yaml": "^3.13.1",
+    "marked": "^1.1.0",
     "moment": "^2.24.0",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
@@ -18,7 +18,8 @@
     "react-draggable": "^4.3.1",
     "react-redux": "^7.2.0",
     "react-scripts": "3.4.1",
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "sanitize-html": "^1.23.0"
   },
   "devDependencies": {
     "eslint": "^6.8.0",

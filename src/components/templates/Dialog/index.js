@@ -16,7 +16,7 @@ function Dialog({
   maximizeOnStart = false,
 }) {
   const [isMaximized, setIsMaximized] = useState(maximizeOnStart);
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [position, setPosition] = useState({ x: 100, y: 100 });
   const [minimizedPosition, setMinimizedPosition] = useState({ x: 0, y: 0 });
 
   function modifyDialog() {
