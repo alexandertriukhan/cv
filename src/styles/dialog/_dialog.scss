@@ -1,10 +1,25 @@
-@import "../constants/colors";
+@import '../constants/colors';
+@import '../constants/fonts';
 
 .window-body {
   max-height: 80vh;
   overflow-y: auto;
 
+  h1, h2, h3, h4, h5 {
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h4 {
+    margin: 0.5em 0;
+  }
+
   .dialog__body {
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 400;
+    font-size: 1.3em;
+    -webkit-font-smoothing: antialiased;
     background: $white;
     padding: 10px;
     min-width: 200px;
