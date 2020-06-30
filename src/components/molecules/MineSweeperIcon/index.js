@@ -1,33 +1,18 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { MineSweeperGame } from '../../';
 import mineSweeperIcon from '../../../assets/images/minesweeper.png';
 import mineSweeperIconSmall from '../../../assets/icons/mine.png';
 import { DesktopIcon } from '../../';
-import { openDialog } from '../../../store/actions/dialogActions';
 
-const dialogName = 'Minesweeper.exe';
-
-function MineSweeperDialogContent() {
-  return <MineSweeperGame />;
-}
-
-export const getDialog = {
-  icon: mineSweeperIconSmall,
-  dialogName: dialogName,
-  children: <MineSweeperDialogContent />,
-};
-
-function MineSweeperIcon({ openDialog }) {
+function MineSweeperIcon() {
   return (
-    <div onClick={() => openDialog(getDialog)}>
-      <DesktopIcon iconSrc={mineSweeperIcon} iconName={dialogName} />
-    </div>
-  )
+      <DesktopIcon
+        iconSrc={mineSweeperIcon}
+        iconName="Minesweeper.exe"
+        dialogIconSrc={mineSweeperIconSmall}
+        dialogContent={<MineSweeperGame />}
+      />
+  );
 }
 
-const mapDispatchToProps = {
-  openDialog,
-};
-
-export default connect(() => ({}), mapDispatchToProps)(MineSweeperIcon);
+export default MineSweeperIcon;

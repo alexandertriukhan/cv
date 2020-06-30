@@ -1,9 +1,8 @@
 import * as TYPES from '../actionTypes/dialogActionTypes';
-import { getDialog } from '../../components/molecules/HelloIcon';
 
 const initialState = {
-  dialogStack: [getDialog],
-  activeDialog: getDialog.dialogName,
+  dialogStack: [],
+  activeDialog: null,
 };
 
 export default function dialogReducer(state = initialState, action) {

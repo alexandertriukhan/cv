@@ -2,7 +2,6 @@
 import TimeBar from './atoms/TimeBar';
 import StartButton from './atoms/StartButton';
 import DialogBar from './atoms/DialogBar';
-import DesktopIcon from './atoms/DesktopIcon';
 import DialogContent from './atoms/DialogContent';
 import Loader from './atoms/Loader';
 
@@ -20,6 +19,7 @@ import MineSweeperGame from './organisms/MineSweeperGame';
 // Templates
 import Dialog from './templates/Dialog';
 import DialogContainer from './templates/DialogContainer';
+import DesktopIcon from './templates/DesktopIcon';
 
 // Pages
 import Main from './pages/Main';
@@ -29,7 +29,6 @@ export {
   TimeBar,
   StartButton,
   DialogBar,
-  DesktopIcon,
   DialogContent,
   Loader,
   // Molecules
@@ -44,6 +43,7 @@ export {
   // Templates
   Dialog,
   DialogContainer,
+  DesktopIcon,
   // Pages
   Main,
 };

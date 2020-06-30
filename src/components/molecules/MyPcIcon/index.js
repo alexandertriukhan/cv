@@ -1,14 +1,10 @@
 import React from 'react';
 import moment from 'moment';
-import { connect } from 'react-redux';
 import { DesktopIcon } from '../../';
 import { SOCIAL_LINKS } from '../../../constants';
 import pcIcon from '../../../assets/images/computer.png';
-import { openDialog } from '../../../store/actions/dialogActions';
 import pcIconSmall from '../../../assets/icons/computer.png';
 import classes from './styles.module.scss';
-
-const dialogName = 'My Computer';
 
 function MyPcDialogContent() {
   return (
@@ -26,22 +22,15 @@ function MyPcDialogContent() {
   );
 }
 
-export const getDialog = {
-  icon: pcIconSmall,
-  dialogName: dialogName,
-  children: <MyPcDialogContent />,
-};
-
-function MyPcIcon({ openDialog }) {
+function MyPcIcon() {
   return (
-    <div onClick={() => openDialog(getDialog)}>
-      <DesktopIcon iconSrc={pcIcon} iconName="My Computer" />
-    </div>
+    <DesktopIcon
+      iconSrc={pcIcon}
+      iconName="My Computer"
+      dialogIconSrc={pcIconSmall}
+      dialogContent={<MyPcDialogContent />}
+    />
   );
 }
 
-const mapDispatchToProps = {
-  openDialog,
-};
-
-export default connect(() => ({}), mapDispatchToProps)(MyPcIcon);
+export default MyPcIcon;

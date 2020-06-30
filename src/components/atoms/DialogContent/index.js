@@ -24,7 +24,7 @@ function DialogContent({ mdFileName }) {
       const contentMD = await fetchTextData(mdFileName);
       setContent(marked(contentMD));
     })();
-  }, []);
+  }, [mdFileName]);
 
   return content ? (
     <div className="dialog__body" dangerouslySetInnerHTML={{ __html: sanitizeHtml(content) }} />
