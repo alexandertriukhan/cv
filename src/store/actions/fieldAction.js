@@ -10,3 +10,7 @@ export const setField = payload => ({
   type: TYPES.SET_FIELD,
   payload,
 });
+
+export const uncoverAll = () => ({
+  type: TYPES.UNCOVER_ALL,
+});

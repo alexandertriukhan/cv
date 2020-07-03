@@ -23,20 +23,21 @@ const DesktopIcon = ({
   dialogContent,
   openDialog,
 }) => {
+  const handleClick = () => {
+    if (dialogContent) {
+      openDialog({
+        icon: dialogIconSrc,
+        dialogName: dialogName,
+        children: dialogContent,
+      });
+    }
+  };
+
   return (
-    <div
-      className={classes.desktopIcon}
-      onClick={() =>
-        openDialog({
-          icon: dialogIconSrc,
-          dialogName: dialogName,
-          children: dialogContent,
-        })
-      }
-    >
+    <button className={classes.desktopIcon} onClick={handleClick}>
       <img src={iconSrc} alt="" />
       <span>{iconName}</span>
-    </div>
+    </button>
   );
 };
 

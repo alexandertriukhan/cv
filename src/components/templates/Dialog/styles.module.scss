@@ -2,6 +2,7 @@
   position: absolute;
   z-index: 1;
   max-width: 860px;
+  filter: brightness(0.8);
 
   &--minimized {
     visibility: hidden;
@@ -14,6 +15,7 @@
 
   &--active {
     z-index: 2;
+    filter: unset;
   }
 }
 

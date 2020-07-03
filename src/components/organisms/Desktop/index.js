@@ -1,5 +1,12 @@
 import React from 'react';
-import { DialogContainer, RecycleBinIcon, MyPcIcon, HelloIcon, MineSweeperIcon } from '../../';
+import {
+  DialogContainer,
+  RecycleBinIcon,
+  MyPcIcon,
+  HelloIcon,
+  MineSweeperIcon,
+  JobExperienceIcon,
+} from '../../';
 import styles from './styles.module.scss';
 
 function Desktop() {
@@ -10,6 +17,7 @@ function Desktop() {
       <HelloIcon />
       <RecycleBinIcon />
       <MineSweeperIcon />
+      <JobExperienceIcon />
     </div>
   );
 }

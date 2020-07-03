@@ -40,6 +40,7 @@ export default function dialogReducer(state = initialState, action) {
       };
 
     case TYPES.CLOSE_DIALOG:
+      // TODO: select new active when closing
       return {
         ...state,
         dialogStack: state.dialogStack.filter(dialog => dialog.dialogName !== action.dialogName),

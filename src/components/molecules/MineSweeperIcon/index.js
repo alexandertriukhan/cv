@@ -6,12 +6,12 @@ import { DesktopIcon } from '../../';
 
 function MineSweeperIcon() {
   return (
-      <DesktopIcon
-        iconSrc={mineSweeperIcon}
-        iconName="Minesweeper.exe"
-        dialogIconSrc={mineSweeperIconSmall}
-        dialogContent={<MineSweeperGame />}
-      />
+    <DesktopIcon
+      iconSrc={mineSweeperIcon}
+      iconName="Minesweeper.exe"
+      dialogIconSrc={mineSweeperIconSmall}
+      dialogContent={<MineSweeperGame />}
+    />
   );
 }
 

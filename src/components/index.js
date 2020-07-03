@@ -10,6 +10,7 @@ import RecycleBinIcon from './molecules/RecycleBinIcon';
 import MyPcIcon from './molecules/MyPcIcon';
 import HelloIcon from './molecules/HelloIcon';
 import MineSweeperIcon from './molecules/MineSweeperIcon';
+import JobExperienceIcon from './molecules/JobExprienceIcon';
 
 // Organisms
 import Taskbar from './organisms/Taskbar';
@@ -36,6 +37,7 @@ export {
   MyPcIcon,
   HelloIcon,
   MineSweeperIcon,
+  JobExperienceIcon,
   // Organisms
   Taskbar,
   Desktop,

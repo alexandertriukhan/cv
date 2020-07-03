@@ -10,6 +10,27 @@
   height: 100%;
   max-width: $desktop_icon;
   margin: 0 auto;
+  padding: 0;
+  background: unset;
+  box-shadow: unset;
+
+  &:not(:disabled):active {
+    padding: 0;
+    box-shadow: unset;
+
+    img, span {
+      filter: brightness(0.5);
+    }
+  }
+
+  &:focus {
+    outline: unset;
+
+    span {
+      outline: 1px dotted $black;
+      outline-offset: -4px;
+    }
+  }
 
   img {
     width: 48px;
@@ -19,5 +40,6 @@
   span {
     color: $white;
     padding: 5px 10px;
+    text-align: center;
   }
 }

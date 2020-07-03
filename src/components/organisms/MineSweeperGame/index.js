@@ -8,9 +8,13 @@ function MineSweeperGame() {
     initField(DIFFICULTIES.BEGINNER.COLS, DIFFICULTIES.BEGINNER.ROWS, DIFFICULTIES.BEGINNER.MINES),
   );
 
-  const handleWin = () => {};
+  const handleWin = () => {
+    console.log('won');
+  };
 
-  const handleLose = () => {};
+  const handleLose = () => {
+    console.log('lost');
+  };
 
   return <MineSweeperField fieldSettings={fieldSettings} onWin={handleWin} onLose={handleLose} />;
 }

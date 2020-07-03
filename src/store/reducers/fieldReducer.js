@@ -3,18 +3,21 @@ import * as TYPES from '../actionTypes/fieldActionTypes';
 export default function fieldReducer(state, action) {
   switch (action.type) {
     case TYPES.SET_UNCOVERED:
-      return state.map((c, cI) =>
-        c.map((r, rI) => {
-          if (cI === action.indexColumn && rI === action.index) {
-            return { ...r, uncovered: true };
+      return state.map((col, colIndex) =>
+        col.map((row, rowIndex) => {
+          if (colIndex === action.indexColumn && rowIndex === action.index) {
+            return { ...row, uncovered: true };
           } else {
-            return r;
+            return row;
           }
         }),
       );
 
     case TYPES.SET_FIELD:
       return action.payload;
+
+    case TYPES.UNCOVER_ALL:
+      return state.map(col => col.map(row => ({ ...row, uncovered: true })));
 
     default:
       return state;

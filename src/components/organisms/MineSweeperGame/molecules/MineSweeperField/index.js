@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react';
 import fieldReducer from '../../../../../store/reducers/fieldReducer';
 import { SET_UNCOVERED } from '../../../../../store/actionTypes/fieldActionTypes';
-import { setField } from '../../../../../store/actions/fieldAction';
+import { setField, uncoverAll } from '../../../../../store/actions/fieldAction';
 import MineSweeperTile from '../../atoms/MineSweeperTile';
 import { getNeighboringTiles } from '../../initField';
 import { FIELDS_SIZE } from '../../constants';
@@ -17,6 +17,7 @@ function MineSweeperField({ onWin, onLose, fieldSettings }) {
 
   const handleClick = (hasMine, columnIndex, index) => {
     if (hasMine) {
+      dispatchFieldAction(uncoverAll())
       onLose();
     } else {
       revealTiles(columnIndex, index);
