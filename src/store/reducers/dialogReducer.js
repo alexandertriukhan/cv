@@ -33,6 +33,7 @@ export default function dialogReducer(state = initialState, action) {
             ? { ...dialog, isMinimized: true }
             : dialog;
         }),
+        // TODO: don't make active if it is minimized
         activeDialog:
           state.dialogStack.length > 1
             ? state.dialogStack[state.dialogStack.length - 1].dialogName

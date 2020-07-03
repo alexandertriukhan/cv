@@ -4,7 +4,7 @@ import { Dialog } from '../..';
 import { closeDialog, minimizeDialog, setActive } from '../../../store/actions/dialogActions';
 
 function DialogContainer({ dialogStack, activeDialog, closeDialog, minimizeDialog, setActive }) {
-  return dialogStack.map(({ icon, dialogName, isMinimized, children }) => (
+  return dialogStack.map(({ icon, dialogName, isMinimized, children }, index) => (
     <Dialog
       icon={icon}
       dialogName={dialogName}
@@ -14,6 +14,7 @@ function DialogContainer({ dialogStack, activeDialog, closeDialog, minimizeDialo
       onMinimize={minimizeDialog}
       isMinimized={isMinimized}
       isActive={activeDialog === dialogName}
+      index={index}
     >
       {children}
     </Dialog>

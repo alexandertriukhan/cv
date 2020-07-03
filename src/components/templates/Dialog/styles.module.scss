@@ -1,6 +1,5 @@
 .dialog {
   position: absolute;
-  z-index: 1;
   max-width: 860px;
   filter: brightness(0.8);
 
@@ -14,7 +13,6 @@
   }
 
   &--active {
-    z-index: 2;
     filter: unset;
   }
 }

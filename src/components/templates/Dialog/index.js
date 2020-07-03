@@ -3,6 +3,9 @@ import classNames from 'classnames';
 import Draggable from 'react-draggable';
 import styles from './styles.module.scss';
 
+const Z_INDEX_BASE = 5;
+const Z_INDEX_ACTIVE_MODIFIER = 5;
+
 function Dialog({
   children,
   icon,
@@ -14,6 +17,7 @@ function Dialog({
   isActive,
   fullControl = true,
   maximizeOnStart = false,
+  index,
 }) {
   const [isMaximized, setIsMaximized] = useState(maximizeOnStart);
   const [position, setPosition] = useState({ x: 100, y: 100 });
@@ -57,7 +61,13 @@ function Dialog({
 
   return (
     <Draggable position={position} onStop={onStopDrag} bounds="parent" handle=".title-bar">
-      <div className={modifyDialog()} onClick={() => onClick(dialogName)}>
+      <div
+        className={modifyDialog()}
+        onClick={() => onClick(dialogName)}
+        style={{
+          zIndex: isActive ? Z_INDEX_BASE + index + Z_INDEX_ACTIVE_MODIFIER : Z_INDEX_BASE + index,
+        }}
+      >
         <div className="title-bar">
           <div className={classNames('title-bar-text', styles.titleBarText)}>
             <img src={icon} alt="" />
