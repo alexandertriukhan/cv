@@ -1,68 +1,140 @@
-This project was bootstrapped with [Create React Index](https://github.com/facebook/create-react-app).
+#### Hello!
+My name is Alexander Triukhan. I am a frontend developer from Zaporizhzhya, Ukraine.
+I was first introduced to programming when I was 12 and had an opportunity to attend Pascal courses 
+at school. That was the time when I became interested in coding and decided to tie my life with it!
+Today I am passioned with developing frontend applications with JS language using modern frontend frameworks
+and technologies.
 
-## Available Scripts
 
-In the project directory, you can run:
+#### AREAS OF EXPERTISE
 
-### `npm start`
+I had an opportunity to work with a lot of different technologies through my working career,
+but I highlight the latest technologies I work with (they are also the ones I'd like to keep
+growing in).
+* **Javascript**, es6, es7, es9
+* **Front-end libraries**: React.
+* **Store-management**: Redux, Redux-Saga, MobX.
+* **Styling**: css-in-js, Material UI, modular css.
+* **Unit-testing**: jest, react-testing-library.
+* **Delivery**: webpack, docker.
+* **Task-management**: Agile, Scrum methodologies. Jira software.
+---
+**Languages**
+**Russian** - near native
+**Ukrainian** - native speaker
+**English** - independent user
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+#### JOB EXPERIENCE
 
-### `npm test`
+**S-PRO**, _Frontend Engineer_
+March 2019 - present
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Notable Projects:**
 
-### `npm run build`
+**ZYNC** - working outstaff for a Zymergen company (www.zymergen.com) which raised **\$500** million in IPO in 2021.
+I was working in a team of 4 people (PM, QA, two developers) on creating an internal web-based application
+for scientists.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Application purposes:**
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- Making complex boolean queries using graphical interface.
+- Examining reactions, pathways, molecules.
+- Saving lists of items of interest.
+- Social features: tagging and adding comments.
+- Integration with external systems for AI-based reaction prediction. (retrosynthesis)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Stack of technologies and methods:**
 
-### `npm run eject`
+- React, Redux-Saga, functional approach to React components, material ui, css-in-js.
+- d3, 3dmol for data visualization, elastic-search, cypher query language for queries.
+- unit-tests: Jest, react-testing-library, enzyme. e2e tests: puppeteer.
+- JIRA, github.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Challenges**:
+Working independently often with a very limited amount of documentation.
+Heavy optimization of a React application. Actively taking part in UI-UX solutions.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Communication daily with a local team. Once a week call with a USA-based team.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+**SoapBox** - startup project. Blockchain youtube analog.
+Working in a team of 15 people. Frontend team - 2 people.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**Stack of technologies and methods:**
 
-## Learn More
+- React, MobX, atomic design for components, modular css.
 
-You can learn more in the [Create React Index documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Challenges**:
+Implemented a custom video player solution using MediaSource API.
+Directed the work of properly encoding videos to work with the solution.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+**Kozak Group**, _Fullstack JS developer_
+November 2018 - March 2019
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+**Notable Projects:**
 
-### Analyzing the Bundle Size
+**Portail Enterpreuner** (Betao Group) https://www.portail-autoentrepreneur.fr/
+Working as a part of fully-remote team of 12 people on a web-portal for business support company.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+**Stack of technologies and methods:**
 
-### Making a Progressive Web Index
+- Vue.js, Vuex, Angular.js, developing own set of components and libraries.
+- Pug(Jade) in Angular templates.
+- node.js and python (django) on the backend (worked on some small tasks)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+**Challenges**:
+Gradual migration of a website from Angular.js to Vue.js.
 
-### Advanced Configuration
+---
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+**DevIT**, _Web Developer_
+April 2018 - November 2018
 
-### Deployment
+Turnkey website development on WordPress. Hourly participating in React projects.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+---
 
-### `npm run build` fails to minify
+**PrJSC Dniprospecstal**, _Software Engineer_
+December 2017 - March 2018
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Working at _Dniprospectal_ I created a system of three parts (web admin interface, back-end, desktop application)
+The system is in use to this day, and the purpose is for admins to create shortcut actions remotely
+for users.
+
+**Stack of technologies and methods:**
+
+- PHP on the backend, MySQL database,
+- C++, QT for desktop application.
+
+**Challenges**
+I had to work with rather outdated equipment, and the solution had to support Windows OS
+down to XP version. Along with working as a developer I also had a brief electrotechnical
+experience.
+
+
+#### ACADEMIC QUALIFICATIONS
+
+**Zaporizhzhya State Engineering Academy**, *Masters degree*
+2016 - 2018
+Software Engineering
+---
+
+**Zaporizhzhya State Engineering Academy**, *Bachelors degree*
+2013 - 2016
+Software Engineering
+---
+
+**School #40 specialised in studying English**
+2002 - 2013
+Graduated with honours (**Summa cum laude**)
+
+
+#### EXTRA SKILLS AND HOBBIES  
+* Driving license: category B (6 years of driving experience)
+* **Ex-musician**: recorded an album, toured for 2 years. Currently playing in another band.
+* Photography: predominantly analog.
+* **Game development**: I struggled a lot through the years but haven't done much progress here, hehe. 
+I created nice react-phaser-mobx template and have a couple of ideas and assets set, 
+so hopefully things will get going someday :)

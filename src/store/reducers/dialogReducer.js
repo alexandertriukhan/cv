@@ -37,14 +37,19 @@ export default function dialogReducer(state = initialState, action) {
         activeDialog:
           state.dialogStack.length > 1
             ? state.dialogStack[state.dialogStack.length - 1].dialogName
-            : '',
+            : null,
       };
 
     case TYPES.CLOSE_DIALOG:
-      // TODO: select new active when closing
+      const newDialogStack = state.dialogStack.filter(
+        dialog => dialog.dialogName !== action.dialogName,
+      );
       return {
         ...state,
-        dialogStack: state.dialogStack.filter(dialog => dialog.dialogName !== action.dialogName),
+        dialogStack: newDialogStack,
+        activeDialog: Boolean(newDialogStack[newDialogStack.length - 1])
+          ? newDialogStack[newDialogStack.length - 1].dialogName
+          : null,
       };
 
     case TYPES.SET_ACTIVE:

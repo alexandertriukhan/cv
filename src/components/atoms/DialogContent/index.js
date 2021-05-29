@@ -1,22 +1,32 @@
 import React, { useState, useEffect } from 'react';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { fetchTextData } from '../../../api';
 import { Loader } from '../../';
 import sanitizeHtml from 'sanitize-html';
 import marked from 'marked';
 
+const renderer = new marked.Renderer();
+const linkRenderer = renderer.link;
+renderer.link = (href, title, text) => {
+  const html = linkRenderer.call(renderer, href, title, text);
+  return html.replace(/^<a /, '<a target="_blank" rel="nofollow" ');
+};
+
 marked.setOptions({
   gfm: true,
   breaks: true,
+  renderer,
 });
 
 /**
  * Component make a request for markdown file and renders its content
  *
  * @param {string} mdFileName
+ * @param {string} className
  */
 
-function DialogContent({ mdFileName }) {
+function DialogContent({ mdFileName, className }) {
   const [content, setContent] = useState();
 
   useEffect(() => {
@@ -27,7 +37,10 @@ function DialogContent({ mdFileName }) {
   }, [mdFileName]);
 
   return content ? (
-    <div className="dialog__body" dangerouslySetInnerHTML={{ __html: sanitizeHtml(content) }} />
+    <div
+      className={classNames('dialog__body', className)}
+      dangerouslySetInnerHTML={{ __html: sanitizeHtml(content) }}
+    />
   ) : (
     <Loader />
   );
@@ -35,6 +48,7 @@ function DialogContent({ mdFileName }) {
 
 DialogContent.propTypes = {
   mdFileName: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default DialogContent;

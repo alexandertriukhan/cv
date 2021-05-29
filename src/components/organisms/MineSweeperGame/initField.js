@@ -19,6 +19,7 @@ export default function initField(nCols, nRows, mines) {
   return {
     cols: nCols,
     rows: nRows,
+    totalMines: minesPlaced,
     field: initValues(field),
   };
 }

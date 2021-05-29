@@ -20,10 +20,12 @@
 .titleBarText {
   display: flex;
   align-items: center;
+  cursor: move;
 
   img {
     width: 16px;
     height: 16px;
     padding-right: 4px;
+    user-select: none;
   }
 }

@@ -28,3 +28,13 @@
     flex-direction: column;
   }
 }
+
+.dialog__body-variant {
+  p {
+    margin-bottom: 0;
+  }
+
+  hr {
+    width: 100%;
+  }
+}

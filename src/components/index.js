@@ -11,6 +11,9 @@ import MyPcIcon from './molecules/MyPcIcon';
 import HelloIcon from './molecules/HelloIcon';
 import MineSweeperIcon from './molecules/MineSweeperIcon';
 import JobExperienceIcon from './molecules/JobExprienceIcon';
+import EducationIcon from './molecules/EducationIcon';
+import ExpertiseIcon from './molecules/ExpertiseIcon';
+import SoftSkillsIcon from './molecules/SoftSkillsIcon';
 
 // Organisms
 import Taskbar from './organisms/Taskbar';
@@ -38,6 +41,9 @@ export {
   HelloIcon,
   MineSweeperIcon,
   JobExperienceIcon,
+  EducationIcon,
+  ExpertiseIcon,
+  SoftSkillsIcon,
   // Organisms
   Taskbar,
   Desktop,

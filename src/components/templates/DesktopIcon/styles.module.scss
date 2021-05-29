@@ -13,6 +13,7 @@
   padding: 0;
   background: unset;
   box-shadow: unset;
+  user-select: none;
 
   &:not(:disabled):active {
     padding: 0;

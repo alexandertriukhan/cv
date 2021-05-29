@@ -6,6 +6,9 @@ import {
   HelloIcon,
   MineSweeperIcon,
   JobExperienceIcon,
+  EducationIcon,
+  ExpertiseIcon,
+  SoftSkillsIcon,
 } from '../../';
 import styles from './styles.module.scss';
 
@@ -18,6 +21,9 @@ function Desktop() {
       <RecycleBinIcon />
       <MineSweeperIcon />
       <JobExperienceIcon />
+      <EducationIcon />
+      <ExpertiseIcon />
+      <SoftSkillsIcon />
     </div>
   );
 }

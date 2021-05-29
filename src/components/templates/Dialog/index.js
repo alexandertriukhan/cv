@@ -38,7 +38,7 @@ function Dialog({
     onMinimize(dialogName);
   };
 
-  const handleMaximize = e => {
+  const handleMaximize = () => {
     if (isMaximized) {
       setPosition(minimizedPosition);
     } else {
@@ -59,6 +59,7 @@ function Dialog({
     setPosition({ x: position.x, y: position.y });
   };
 
+  // TODO: Draggable breaks button click
   return (
     <Draggable position={position} onStop={onStopDrag} bounds="parent" handle=".title-bar">
       <div

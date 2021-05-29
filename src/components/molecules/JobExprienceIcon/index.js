@@ -9,7 +9,7 @@ function JobExperienceIcon() {
       iconName="Job Experience"
       iconSrc={JobIconBig}
       dialogIconSrc={JobIconSmall}
-      dialogContent={<DialogContent mdFileName="job.md" />}
+      dialogContent={<DialogContent mdFileName="job.md" className="dialog__body-variant" />}
     />
   );
 }
