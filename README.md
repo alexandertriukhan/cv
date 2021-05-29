@@ -1,12 +1,12 @@
-### Hello!
+## Hello! :wave:
 My name is Alexander Triukhan. I am a frontend developer from Zaporizhzhya, Ukraine.
 I was first introduced to programming when I was 12 and had an opportunity to attend Pascal courses 
 at school. That was the time when I became interested in coding and decided to tie my life with it!
-Today I am passioned with developing frontend applications with JS language using modern frontend frameworks
+Today I am passioned with developing frontend applications in JS language using modern frontend frameworks
 and technologies.
 
 
-### AREAS OF EXPERTISE
+### AREAS OF EXPERTISE :computer:
 
 I had an opportunity to work with a lot of different technologies through my working career,
 but I highlight the latest technologies I work with (they are also the ones I'd like to keep
@@ -25,9 +25,9 @@ growing in).
 **English** - independent user
 
 
-### JOB EXPERIENCE
+### JOB EXPERIENCE :briefcase:
 
-**S-PRO**, _Frontend Engineer_
+**S-PRO**, _Frontend Engineer_  
 March 2019 - present
 
 **Notable Projects:**
@@ -70,7 +70,7 @@ Directed the work of properly encoding videos to work with the solution.
 
 ---
 
-**Kozak Group**, _Fullstack JS developer_
+**Kozak Group**, _Fullstack JS developer_  
 November 2018 - March 2019
 
 **Notable Projects:**
@@ -89,14 +89,14 @@ Gradual migration of a website from Angular.js to Vue.js.
 
 ---
 
-**DevIT**, _Web Developer_
+**DevIT**, _Web Developer_  
 April 2018 - November 2018
 
 Turnkey website development on WordPress. Hourly participating in React projects.
 
 ---
 
-**PrJSC Dniprospecstal**, _Software Engineer_
+**PrJSC Dniprospecstal**, _Software Engineer_  
 December 2017 - March 2018
 
 Working at _Dniprospectal_ I created a system of three parts (web admin interface, back-end, desktop application)
@@ -114,16 +114,18 @@ down to XP version. Along with working as a developer I also had a brief electro
 experience.
 
 
-### ACADEMIC QUALIFICATIONS
+### ACADEMIC QUALIFICATIONS :mortar_board:
 
-**Zaporizhzhya State Engineering Academy**, *Masters degree*
-2016 - 2018
-Software Engineering
+**Zaporizhzhya State Engineering Academy**, *Masters degree*  
+2016 - 2018  
+Software Engineering  
+
 ---
 
-**Zaporizhzhya State Engineering Academy**, *Bachelors degree*
-2013 - 2016
-Software Engineering
+**Zaporizhzhya State Engineering Academy**, *Bachelors degree*  
+2013 - 2016  
+Software Engineering  
+
 ---
 
 **School #40 specialised in studying English**
@@ -131,10 +133,10 @@ Software Engineering
 Graduated with honours (**Summa cum laude**)
 
 
-### EXTRA SKILLS AND HOBBIES
+### EXTRA SKILLS AND HOBBIES :surfer:
 * Driving license: category B (6 years of driving experience)
 * **Ex-musician**: recorded an album, toured for 2 years. Currently playing in another band.
 * Photography: predominantly analog.
-* **Game development**: I struggled a lot through the years but haven't done much progress here, hehe. 
-I created nice react-phaser-mobx template and have a couple of ideas and assets set, 
-so hopefully things will get going someday :)
+* **Game development**: I struggled a lot through the years but haven't done much progress here, hehe :smile:   
+I created nice react-phaser-mobx template and have a couple of ideas and assets set,   
+so hopefully things will get going someday.
