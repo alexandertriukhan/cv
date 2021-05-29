@@ -18,11 +18,13 @@ growing in).
 * **Unit-testing**: jest, react-testing-library.
 * **Delivery**: webpack, docker.
 * **Task-management**: Agile, Scrum methodologies. Jira software.
+
+**Languages**  
+* **Russian** - near native  
+* **Ukrainian** - native speaker  
+**English** - independent user  
+
 ---
-**Languages**
-**Russian** - near native
-**Ukrainian** - native speaker
-**English** - independent user
 
 
 ### JOB EXPERIENCE :briefcase:
@@ -32,9 +34,10 @@ March 2019 - present
 
 **Notable Projects:**
 
-**ZYNC** - working outstaff for a Zymergen company (www.zymergen.com) which raised **\$500** million in IPO in 2021.
-I was working in a team of 4 people (PM, QA, two developers) on creating an internal web-based application
-for scientists.
+#### ZYNC 
+> Working outstaff for a [Zymergen](https://www.zymergen.com) company which raised **\$500** million in IPO in 2021.
+> I was working in a team of 4 people (PM, QA, two developers) on creating an internal web-based application
+> for scientists.
 
 **Application purposes:**
 
@@ -55,10 +58,11 @@ for scientists.
 Working independently often with a very limited amount of documentation.
 Heavy optimization of a React application. Actively taking part in UI-UX solutions.
 
-Communication daily with a local team. Once a week call with a USA-based team.
+Communication daily with a local team. Once a week call with a USA-based team.  
 
-**SoapBox** - startup project. Blockchain youtube analog.
-Working in a team of 15 people. Frontend team - 2 people.
+#### SoapBox 
+> Startup project. Blockchain youtube analog.
+> Working in a team of 15 people. Frontend team - 2 people.
 
 **Stack of technologies and methods:**
 
@@ -75,8 +79,8 @@ November 2018 - March 2019
 
 **Notable Projects:**
 
-**Portail Enterpreuner** (Betao Group) https://www.portail-autoentrepreneur.fr/
-Working as a part of fully-remote team of 12 people on a web-portal for business support company.
+#### [Portail Enterpreuner](https://www.portail-autoentrepreneur.fr/) (Betao Group)
+> Working as a part of fully-remote team of 12 people on a web-portal for business support company.
 
 **Stack of technologies and methods:**
 
@@ -99,9 +103,9 @@ Turnkey website development on WordPress. Hourly participating in React projects
 **PrJSC Dniprospecstal**, _Software Engineer_  
 December 2017 - March 2018
 
-Working at _Dniprospectal_ I created a system of three parts (web admin interface, back-end, desktop application)
-The system is in use to this day, and the purpose is for admins to create shortcut actions remotely
-for users.
+> Working at _Dniprospectal_ I created a system of three parts (web admin interface, back-end, desktop application)
+> The system is in use to this day, and the purpose is for admins to create shortcut actions remotely  
+> for users.
 
 **Stack of technologies and methods:**
 
@@ -128,9 +132,9 @@ Software Engineering
 
 ---
 
-**School #40 specialised in studying English**
-2002 - 2013
-Graduated with honours (**Summa cum laude**)
+**School #40 specialised in studying English**  
+2002 - 2013  
+Graduated with honours (**Summa cum laude**)  
 
 
 ### EXTRA SKILLS AND HOBBIES :surfer:
@@ -140,3 +144,9 @@ Graduated with honours (**Summa cum laude**)
 * **Game development**: I struggled a lot through the years but haven't done much progress here, hehe :smile:   
 I created nice react-phaser-mobx template and have a couple of ideas and assets set,   
 so hopefully things will get going someday.
+
+---
+
+### Contact me :incoming_envelope:
+* [LinkedIn](https://www.linkedin.com/in/alexander-triukhan-83aaab153/)  
+* alexandertriukhan@gmail.com
