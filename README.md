@@ -1,4 +1,4 @@
-#### Hello!
+### Hello!
 My name is Alexander Triukhan. I am a frontend developer from Zaporizhzhya, Ukraine.
 I was first introduced to programming when I was 12 and had an opportunity to attend Pascal courses 
 at school. That was the time when I became interested in coding and decided to tie my life with it!
@@ -6,7 +6,7 @@ Today I am passioned with developing frontend applications with JS language usin
 and technologies.
 
 
-#### AREAS OF EXPERTISE
+### AREAS OF EXPERTISE
 
 I had an opportunity to work with a lot of different technologies through my working career,
 but I highlight the latest technologies I work with (they are also the ones I'd like to keep
@@ -25,7 +25,7 @@ growing in).
 **English** - independent user
 
 
-#### JOB EXPERIENCE
+### JOB EXPERIENCE
 
 **S-PRO**, _Frontend Engineer_
 March 2019 - present
@@ -114,7 +114,7 @@ down to XP version. Along with working as a developer I also had a brief electro
 experience.
 
 
-#### ACADEMIC QUALIFICATIONS
+### ACADEMIC QUALIFICATIONS
 
 **Zaporizhzhya State Engineering Academy**, *Masters degree*
 2016 - 2018
@@ -131,7 +131,7 @@ Software Engineering
 Graduated with honours (**Summa cum laude**)
 
 
-#### EXTRA SKILLS AND HOBBIES  
+### EXTRA SKILLS AND HOBBIES
 * Driving license: category B (6 years of driving experience)
 * **Ex-musician**: recorded an album, toured for 2 years. Currently playing in another band.
 * Photography: predominantly analog.
