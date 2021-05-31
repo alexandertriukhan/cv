@@ -1,28 +1,29 @@
 {
   "files": {
-    "main.css": "/cv/static/css/main.6eba15c2.chunk.css",
-    "main.js": "/cv/static/js/main.0690c4e8.chunk.js",
-    "main.js.map": "/cv/static/js/main.0690c4e8.chunk.js.map",
-    "runtime-main.js": "/cv/static/js/runtime-main.b9f4829e.js",
-    "runtime-main.js.map": "/cv/static/js/runtime-main.b9f4829e.js.map",
-    "static/css/2.a9448911.chunk.css": "/cv/static/css/2.a9448911.chunk.css",
-    "static/js/2.317249d5.chunk.js": "/cv/static/js/2.317249d5.chunk.js",
-    "static/js/2.317249d5.chunk.js.map": "/cv/static/js/2.317249d5.chunk.js.map",
+    "main.css": "/cv/static/css/main.66f69db3.chunk.css",
+    "main.js": "/cv/static/js/main.6c7e68ad.chunk.js",
+    "main.js.map": "/cv/static/js/main.6c7e68ad.chunk.js.map",
+    "runtime-main.js": "/cv/static/js/runtime-main.c17789b0.js",
+    "runtime-main.js.map": "/cv/static/js/runtime-main.c17789b0.js.map",
+    "static/css/2.10d49d81.chunk.css": "/cv/static/css/2.10d49d81.chunk.css",
+    "static/js/2.cd8ff877.chunk.js": "/cv/static/js/2.cd8ff877.chunk.js",
+    "static/js/2.cd8ff877.chunk.js.map": "/cv/static/js/2.cd8ff877.chunk.js.map",
     "index.html": "/cv/index.html",
-    "precache-manifest.affec83de2b624b1fd7126dbc246f57c.js": "/cv/precache-manifest.affec83de2b624b1fd7126dbc246f57c.js",
+    "precache-manifest.e37b7428ccffc6159a4fffb32d0e4b89.js": "/cv/precache-manifest.e37b7428ccffc6159a4fffb32d0e4b89.js",
     "service-worker.js": "/cv/service-worker.js",
-    "static/css/2.a9448911.chunk.css.map": "/cv/static/css/2.a9448911.chunk.css.map",
-    "static/css/main.6eba15c2.chunk.css.map": "/cv/static/css/main.6eba15c2.chunk.css.map",
-    "static/js/2.317249d5.chunk.js.LICENSE.txt": "/cv/static/js/2.317249d5.chunk.js.LICENSE.txt",
+    "static/css/2.10d49d81.chunk.css.map": "/cv/static/css/2.10d49d81.chunk.css.map",
+    "static/css/main.66f69db3.chunk.css.map": "/cv/static/css/main.66f69db3.chunk.css.map",
+    "static/js/2.cd8ff877.chunk.js.LICENSE.txt": "/cv/static/js/2.cd8ff877.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/cv/static/media/SFProDisplay-Semibold.af64ab08.woff2",
+    "static/media/cv.pdf": "/cv/static/media/cv.cf229319.pdf",
     "static/media/loading.gif": "/cv/static/media/loading.f683d2ee.gif",
     "static/media/98.css": "/cv/static/media/ms_sans_serif_bold.cb1c7473.woff2"
   },
   "entrypoints": [
-    "static/js/runtime-main.b9f4829e.js",
-    "static/css/2.a9448911.chunk.css",
-    "static/js/2.317249d5.chunk.js",
-    "static/css/main.6eba15c2.chunk.css",
-    "static/js/main.0690c4e8.chunk.js"
+    "static/js/runtime-main.c17789b0.js",
+    "static/css/2.10d49d81.chunk.css",
+    "static/js/2.cd8ff877.chunk.js",
+    "static/css/main.66f69db3.chunk.css",
+    "static/js/main.6c7e68ad.chunk.js"
   ]
 }
