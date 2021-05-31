@@ -17,3 +17,8 @@
     box-shadow: none;
   }
 }
+
+.dialogBar {
+  max-width: calc(100vw - 124px);
+  overflow-x: hidden;
+}

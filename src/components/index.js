@@ -24,6 +24,7 @@ import MineSweeperGame from './organisms/MineSweeperGame';
 import Dialog from './templates/Dialog';
 import DialogContainer from './templates/DialogContainer';
 import DesktopIcon from './templates/DesktopIcon';
+import ConditionalWrapper from './templates/ConditionalWrapper';
 
 // Pages
 import Main from './pages/Main';
@@ -52,6 +53,7 @@ export {
   Dialog,
   DialogContainer,
   DesktopIcon,
+  ConditionalWrapper,
   // Pages
   Main,
 };

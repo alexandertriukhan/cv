@@ -7,7 +7,7 @@ import pcIcon from '../../../assets/images/computer.png';
 import pcIconSmall from '../../../assets/icons/computer.png';
 import classes from './styles.module.scss';
 
-function MyPcDialogContent() {
+export function MyPcDialogContent() {
   return (
     <div className={classes.myPcDialogContent}>
       <img src={agentIcon} alt="" />
@@ -20,6 +20,9 @@ function MyPcDialogContent() {
           </a>
         </div>
       ))}
+      <div>
+        <a href="mailto:alexandertriukhan@gmail.com">alexandertriukhan@gmail.com</a>
+      </div>
     </div>
   );
 }
@@ -31,6 +34,10 @@ function MyPcIcon() {
       iconName="My Computer"
       dialogIconSrc={pcIconSmall}
       dialogContent={<MyPcDialogContent />}
+      dialogProps={{
+        fullControl: false,
+        noBackdrop: true,
+      }}
     />
   );
 }

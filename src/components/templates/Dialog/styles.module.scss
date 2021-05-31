@@ -1,7 +1,11 @@
+@import "../../../styles/constants/colors";
+
 .dialog {
   position: absolute;
   max-width: 860px;
   filter: brightness(0.8);
+  display: flex;
+  flex-direction: column;
 
   &--minimized {
     visibility: hidden;
@@ -10,10 +14,19 @@
   &--maximized {
     width: calc(100% - 6px);
     height: calc(100% - 6px);
+    max-width: 100%;
+
+    & > .dialog__body {
+      max-height: unset;
+    }
   }
 
   &--active {
     filter: unset;
+  }
+
+  &__body {
+    height: 100%;
   }
 }
 
@@ -28,4 +41,9 @@
     padding-right: 4px;
     user-select: none;
   }
+}
+
+.dialog__backdrop {
+  height: 100%;
+  background: $white;
 }

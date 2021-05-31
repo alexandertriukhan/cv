@@ -3,6 +3,28 @@
   .gameStatus {
     box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf,
     inset 2px 2px grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+
+    & > div {
+      width: 36px;
+      text-align: center;
+    }
+
+    & button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 36px;
+      min-width: 36px;
+      padding: 2px;
+
+      & > div {
+        font-size: 24px;
+      }
+    }
   }
 
   .gameContainer {

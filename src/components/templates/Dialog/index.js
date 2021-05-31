@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
+import { isMobile } from 'react-device-detect';
 import classNames from 'classnames';
+import { ConditionalWrapper } from '../../';
 import Draggable from 'react-draggable';
 import styles from './styles.module.scss';
 
 const Z_INDEX_BASE = 5;
 const Z_INDEX_ACTIVE_MODIFIER = 5;
+
+const MOBILE_START_POSITION = {
+  x: 0,
+  y: 0,
+};
 
 function Dialog({
   children,
@@ -17,10 +24,11 @@ function Dialog({
   isActive,
   fullControl = true,
   maximizeOnStart = false,
+  noBackdrop,
   index,
 }) {
-  const [isMaximized, setIsMaximized] = useState(maximizeOnStart);
-  const [position, setPosition] = useState({ x: 100, y: 100 });
+  const [isMaximized, setIsMaximized] = useState(isMobile ? true : maximizeOnStart);
+  const [position, setPosition] = useState(isMobile ? MOBILE_START_POSITION : { x: 100, y: 100 });
   const [minimizedPosition, setMinimizedPosition] = useState({ x: 0, y: 0 });
 
   function modifyDialog() {
@@ -49,6 +57,7 @@ function Dialog({
   };
 
   const handleClose = e => {
+    e.preventDefault();
     e.stopPropagation();
     onClose(dialogName);
   };
@@ -59,9 +68,14 @@ function Dialog({
     setPosition({ x: position.x, y: position.y });
   };
 
-  // TODO: Draggable breaks button click
   return (
-    <Draggable position={position} onStop={onStopDrag} bounds="parent" handle=".title-bar">
+    <Draggable
+      position={position}
+      onStop={onStopDrag}
+      bounds="parent"
+      handle=".title-bar"
+      cancel=".no-drag"
+    >
       <div
         className={modifyDialog()}
         onClick={() => onClick(dialogName)}
@@ -77,14 +91,21 @@ function Dialog({
           <div className="title-bar-controls">
             {fullControl && (
               <>
-                <button aria-label="Minimize" onClick={handleMinimize} />
-                <button aria-label="Maximize" onClick={handleMaximize} />
+                <button className="no-drag" aria-label="Minimize" onClick={handleMinimize} />
+                <button className="no-drag" aria-label="Maximize" onClick={handleMaximize} />
               </>
             )}
-            <button aria-label="Close" onClick={handleClose} />
+            <button className="no-drag" aria-label="Close" onClick={handleClose} />
           </div>
         </div>
-        <div className="window-body">{children}</div>
+        <div className={classNames('window-body', styles.dialog__body)}>
+          <ConditionalWrapper
+            condition={!noBackdrop}
+            wrapper={children => <div className={styles.dialog__backdrop}>{children}</div>}
+          >
+            {children}
+          </ConditionalWrapper>
+        </div>
       </div>
     </Draggable>
   );

@@ -22,7 +22,7 @@ growing in).
 **Languages**  
 * **Russian** - near native  
 * **Ukrainian** - native speaker  
-**English** - independent user  
+* **English** - independent user  
 
 ---
 
@@ -135,6 +135,8 @@ Software Engineering
 **School #40 specialised in studying English**  
 2002 - 2013  
 Graduated with honours (**Summa cum laude**)  
+
+---
 
 
 ### EXTRA SKILLS AND HOBBIES :surfer:

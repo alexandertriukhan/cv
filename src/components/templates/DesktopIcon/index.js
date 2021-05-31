@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import classes from './styles.module.scss';
@@ -22,6 +23,8 @@ const DesktopIcon = ({
   dialogName = iconName,
   dialogContent,
   openDialog,
+  invert,
+  dialogProps = {},
 }) => {
   const handleClick = () => {
     if (dialogContent) {
@@ -29,12 +32,16 @@ const DesktopIcon = ({
         icon: dialogIconSrc,
         dialogName: dialogName,
         children: dialogContent,
+        props: dialogProps,
       });
     }
   };
 
   return (
-    <button className={classes.desktopIcon} onClick={handleClick}>
+    <button
+      className={classNames(classes.desktopIcon, { [classes['desktopIcon--invert']]: invert })}
+      onClick={handleClick}
+    >
       <img src={iconSrc} alt="" />
       <span>{iconName}</span>
     </button>

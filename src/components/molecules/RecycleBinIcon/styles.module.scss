@@ -1,6 +1,19 @@
+@import '../../../styles/constants/colors';
+@import '../../../styles/constants/sizes';
+
 .recycleBin {
   grid-column-start: auto;
   grid-column-end: -1;
   grid-row-start: auto;
   grid-row-end: -1;
+}
+
+.recycleBin__content {
+  min-width: 30vw;
+  min-height: 40vh;
+  width: 100%;
+  height: calc(100% - 29px);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($desktop_icon, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax($desktop_icon, 1fr));
 }
