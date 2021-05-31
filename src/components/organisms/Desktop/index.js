@@ -9,6 +9,7 @@ import {
   EducationIcon,
   ExpertiseIcon,
   SoftSkillsIcon,
+  PDFIcon,
 } from '../../';
 import styles from './styles.module.scss';
 
@@ -24,6 +25,7 @@ function Desktop() {
       <EducationIcon />
       <ExpertiseIcon />
       <SoftSkillsIcon />
+      <PDFIcon />
     </div>
   );
 }

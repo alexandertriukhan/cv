@@ -14,6 +14,7 @@ import JobExperienceIcon from './molecules/JobExprienceIcon';
 import EducationIcon from './molecules/EducationIcon';
 import ExpertiseIcon from './molecules/ExpertiseIcon';
 import SoftSkillsIcon from './molecules/SoftSkillsIcon';
+import PDFIcon from './molecules/PDFIcon';
 
 // Organisms
 import Taskbar from './organisms/Taskbar';
@@ -45,6 +46,7 @@ export {
   EducationIcon,
   ExpertiseIcon,
   SoftSkillsIcon,
+  PDFIcon,
   // Organisms
   Taskbar,
   Desktop,

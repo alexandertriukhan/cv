@@ -25,6 +25,7 @@ const DesktopIcon = ({
   openDialog,
   invert,
   dialogProps = {},
+  onClick = () => {},
 }) => {
   const handleClick = () => {
     if (dialogContent) {
@@ -35,6 +36,7 @@ const DesktopIcon = ({
         props: dialogProps,
       });
     }
+    onClick();
   };
 
   return (
