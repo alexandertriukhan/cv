@@ -10,7 +10,7 @@
     "98.css": "^0.1.16",
     "classnames": "^2.2.6",
     "fetchz": "^2.0.1",
-    "marked": "^1.1.0",
+    "marked": "^4.0.10",
     "moment": "^2.27.0",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
