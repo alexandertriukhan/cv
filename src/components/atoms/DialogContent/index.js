@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { fetchTextData } from '../../../api';
 import { Loader } from '../../';
 import sanitizeHtml from 'sanitize-html';
-import marked from 'marked';
+import { marked } from 'marked';
 
 const renderer = new marked.Renderer();
 const linkRenderer = renderer.link;
