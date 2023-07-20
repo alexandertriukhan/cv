@@ -1,7 +1,9 @@
 import React from 'react';
-import SoftIconBig from '../../../assets/images/soft.png';
+
 import SoftIconSmall from '../../../assets/icons/soft.png';
-import { DesktopIcon, DialogContent } from '../../';
+import SoftIconBig from '../../../assets/images/soft.png';
+import { DialogContent } from '../../atoms';
+import { DesktopIcon } from '../../templates';
 
 function SoftSkillsIcon() {
   return (

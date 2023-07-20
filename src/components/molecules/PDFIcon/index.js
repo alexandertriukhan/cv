@@ -1,8 +1,9 @@
 import React from 'react';
-import PDFIconBig from '../../../assets/images/pdf.png';
-import PDFIconSmall from '../../../assets/icons/pdf.png';
+
 import pdf from '../../../assets/documents/cv.pdf';
-import { DesktopIcon } from '../../';
+import PDFIconSmall from '../../../assets/icons/pdf.png';
+import PDFIconBig from '../../../assets/images/pdf.png';
+import { DesktopIcon } from '../../templates';
 import styles from './styles.module.scss';
 
 function PDFIcon() {

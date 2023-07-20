@@ -1,5 +1,6 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
 import StartIcon from '../../../assets/icons/start.png';
 import styles from './styles.module.scss';
 
@@ -21,6 +22,6 @@ function StartButton({ onClick }) {
 
 StartButton.propTypes = {
   onClick: PropTypes.func,
-}
+};
 
 export default StartButton;

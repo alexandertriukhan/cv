@@ -47,7 +47,7 @@ export default function dialogReducer(state = initialState, action) {
       return {
         ...state,
         dialogStack: newDialogStack,
-        activeDialog: Boolean(newDialogStack[newDialogStack.length - 1])
+        activeDialog: newDialogStack[newDialogStack.length - 1]
           ? newDialogStack[newDialogStack.length - 1].dialogName
           : null,
       };

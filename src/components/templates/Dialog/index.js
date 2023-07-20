@@ -1,8 +1,9 @@
+import classNames from 'classnames';
 import React, { useState } from 'react';
 import { isMobile } from 'react-device-detect';
-import classNames from 'classnames';
-import { ConditionalWrapper } from '../../';
 import Draggable from 'react-draggable';
+
+import { ConditionalWrapper } from '../';
 import styles from './styles.module.scss';
 
 const Z_INDEX_BASE = 5;

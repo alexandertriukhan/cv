@@ -1,9 +1,10 @@
 import React from 'react';
-import { DesktopIcon } from '../../';
-import iconSrc from '../../../assets/images/recycle.png';
+
 import iconSmall from '../../../assets/icons/recycle.png';
-import iconJquery from '../../../assets/images/script.png';
 import iconWordPress from '../../../assets/images/directory.png';
+import iconSrc from '../../../assets/images/recycle.png';
+import iconJquery from '../../../assets/images/script.png';
+import { DesktopIcon } from '../../templates';
 import styles from './styles.module.scss';
 
 const RecycleBinDialog = () => {

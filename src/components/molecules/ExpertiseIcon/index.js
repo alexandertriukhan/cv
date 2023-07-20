@@ -1,7 +1,9 @@
 import React from 'react';
-import ExpertiseIconBig from '../../../assets/images/expertise.png';
+
 import ExpertiseIconSmall from '../../../assets/icons/expertise.png';
-import { DesktopIcon, DialogContent } from '../../';
+import ExpertiseIconBig from '../../../assets/images/expertise.png';
+import { DialogContent } from '../../atoms';
+import { DesktopIcon } from '../../templates';
 
 function ExpertiseIcon() {
   return (

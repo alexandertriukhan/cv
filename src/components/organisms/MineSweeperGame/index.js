@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTimer } from 'use-timer';
-import MineSweeperField from './molecules/MineSweeperField';
-import initField from './initField';
+
 import { DIFFICULTIES } from './constants';
+import initField from './initField';
+import MineSweeperField from './molecules/MineSweeperField';
 import classes from './styles.module.scss';
 
 const pickEmoji = (isLose, isWin) => {

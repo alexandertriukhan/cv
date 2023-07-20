@@ -1,9 +1,10 @@
-import React from 'react';
 import classNames from 'classnames';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import classes from './styles.module.scss';
+import React from 'react';
+import { connect } from 'react-redux';
+
 import { openDialog } from '../../../store/actions/dialogActions';
+import classes from './styles.module.scss';
 
 /**
  * Component renders a win98 styled Desktop Icon with attached Dialog

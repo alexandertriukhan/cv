@@ -1,11 +1,12 @@
+import classNames from 'classnames';
 import React from 'react';
 import { connect } from 'react-redux';
-import { DialogBar, StartButton, TimeBar } from '../../';
+
 import pcIconSmall from '../../../assets/icons/computer.png';
-import { MyPcDialogContent } from '../../molecules/MyPcIcon';
-import classNames from 'classnames';
-import styles from './styles.module.scss';
 import { openDialog } from '../../../store/actions/dialogActions';
+import { DialogBar, StartButton, TimeBar } from '../../atoms';
+import { MyPcDialogContent } from '../../molecules/MyPcIcon';
+import styles from './styles.module.scss';
 
 function Taskbar({ openDialog }) {
   const handleStartClick = () => {

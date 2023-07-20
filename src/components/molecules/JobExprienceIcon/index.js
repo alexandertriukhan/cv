@@ -1,7 +1,9 @@
 import React from 'react';
-import JobIconBig from '../../../assets/images/job.png';
+
 import JobIconSmall from '../../../assets/icons/job.png';
-import { DesktopIcon, DialogContent } from '../../';
+import JobIconBig from '../../../assets/images/job.png';
+import { DialogContent } from '../../atoms';
+import { DesktopIcon } from '../../templates';
 
 function JobExperienceIcon() {
   return (

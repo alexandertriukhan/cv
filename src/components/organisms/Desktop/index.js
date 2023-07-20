@@ -1,16 +1,17 @@
 import React from 'react';
+
 import {
-  DialogContainer,
-  RecycleBinIcon,
-  MyPcIcon,
-  HelloIcon,
-  MineSweeperIcon,
-  JobExperienceIcon,
   EducationIcon,
   ExpertiseIcon,
-  SoftSkillsIcon,
+  HelloIcon,
+  JobExperienceIcon,
+  MineSweeperIcon,
+  MyPcIcon,
   PDFIcon,
-} from '../../';
+  RecycleBinIcon,
+  SoftSkillsIcon,
+} from '../../molecules';
+import { DialogContainer } from '../../templates';
 import styles from './styles.module.scss';
 
 function Desktop() {

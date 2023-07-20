@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
-import PropTypes from 'prop-types';
-import { fetchTextData } from '../../../api';
-import { Loader } from '../../';
-import sanitizeHtml from 'sanitize-html';
 import { marked } from 'marked';
+import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
+import sanitizeHtml from 'sanitize-html';
+
+import { fetchTextData } from '../../../api';
+import { Loader } from '../';
 
 const renderer = new marked.Renderer();
 const linkRenderer = renderer.link;

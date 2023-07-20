@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Dialog } from '../..';
+
 import { closeDialog, minimizeDialog, setActive } from '../../../store/actions/dialogActions';
+import { Dialog } from '..';
 
 function DialogContainer({ dialogStack, activeDialog, closeDialog, minimizeDialog, setActive }) {
   return dialogStack.map(({ icon, dialogName, isMinimized, children, props }, index) => (

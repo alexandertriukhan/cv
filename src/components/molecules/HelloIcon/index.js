@@ -1,7 +1,9 @@
 import React from 'react';
-import HelpIconBig from '../../../assets/images/help.png';
+
 import HelpIconSmall from '../../../assets/icons/help.png';
-import { DesktopIcon, DialogContent } from '../../';
+import HelpIconBig from '../../../assets/images/help.png';
+import { DialogContent } from '../../atoms';
+import { DesktopIcon } from '../../templates';
 
 function HelloIcon() {
   return (

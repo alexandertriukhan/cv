@@ -1,10 +1,11 @@
-import React, { useReducer, useEffect, useRef, memo } from 'react';
-import fieldReducer from '../../../../../store/reducers/fieldReducer';
-import { SET_UNCOVERED } from '../../../../../store/actionTypes/fieldActionTypes';
+import React, { memo, useEffect, useReducer, useRef } from 'react';
+
 import { setField, uncoverAll } from '../../../../../store/actions/fieldAction';
+import { SET_UNCOVERED } from '../../../../../store/actionTypes/fieldActionTypes';
+import fieldReducer from '../../../../../store/reducers/fieldReducer';
 import MineSweeperTile from '../../atoms/MineSweeperTile';
-import { getNeighboringTiles } from '../../initField';
 import { FIELDS_SIZE } from '../../constants';
+import { getNeighboringTiles } from '../../initField';
 import classes from './styles.module.scss';
 
 function MineSweeperField({ onWin, onLose, fieldSettings }) {

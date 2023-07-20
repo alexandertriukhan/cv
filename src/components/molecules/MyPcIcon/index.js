@@ -1,10 +1,11 @@
-import React from 'react';
 import moment from 'moment';
-import { DesktopIcon } from '../../';
-import { SOCIAL_LINKS } from '../../../constants';
+import React from 'react';
+
+import pcIconSmall from '../../../assets/icons/computer.png';
 import agentIcon from '../../../assets/images/agent.png';
 import pcIcon from '../../../assets/images/computer.png';
-import pcIconSmall from '../../../assets/icons/computer.png';
+import { SOCIAL_LINKS } from '../../../constants';
+import { DesktopIcon } from '../../templates';
 import classes from './styles.module.scss';
 
 export function MyPcDialogContent() {

@@ -1,7 +1,8 @@
+import classNames from 'classnames';
 import React from 'react';
+
 import MineImg from '../../../../../assets/icons/mine.png';
 import { FIELDS_SIZE } from '../../constants';
-import classNames from 'classnames';
 import classes from './styles.module.scss';
 
 function MineSweeperTileValue({ value }) {

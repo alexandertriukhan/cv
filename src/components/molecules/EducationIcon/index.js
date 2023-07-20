@@ -1,7 +1,9 @@
 import React from 'react';
-import EducationIconBig from '../../../assets/images/academic.png';
+
 import EducationIconSmall from '../../../assets/icons/academic.png';
-import { DesktopIcon, DialogContent } from '../../';
+import EducationIconBig from '../../../assets/images/academic.png';
+import { DialogContent } from '../../atoms';
+import { DesktopIcon } from '../../templates';
 
 function EducationIcon() {
   return (

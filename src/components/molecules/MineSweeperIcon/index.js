@@ -1,8 +1,9 @@
 import React from 'react';
-import { MineSweeperGame } from '../../';
-import mineSweeperIcon from '../../../assets/images/minesweeper.png';
+
 import mineSweeperIconSmall from '../../../assets/icons/mine.png';
-import { DesktopIcon } from '../../';
+import mineSweeperIcon from '../../../assets/images/minesweeper.png';
+import { MineSweeperGame } from '../../organisms';
+import { DesktopIcon } from '../../templates';
 import styles from './styles.module.scss';
 
 function MineSweeperIcon() {

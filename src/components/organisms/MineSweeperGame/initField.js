@@ -30,7 +30,7 @@ function initValues(field) {
     for (let j = 0; j < result[0].length; j++) {
       if (!result[i][j].hasMine) {
         const neighbors = getNeighboringTiles(result.length, result[0].length, i, j);
-        result[i][j].value = neighbors.reduce((acc, {x, y}) => {
+        result[i][j].value = neighbors.reduce((acc, { x, y }) => {
           if (result[x][y].hasMine) {
             acc++;
           }
@@ -54,7 +54,7 @@ export function getNeighboringTiles(cols, rows, i, j) {
     neighbors.push({ x: i, y: j - 1 });
   }
   if (i < cols - 1 && j < rows - 1) {
-    neighbors.push({ x: i + 1, y: j + 1});
+    neighbors.push({ x: i + 1, y: j + 1 });
   }
   if (i < cols - 1) {
     neighbors.push({ x: i + 1, y: j });
