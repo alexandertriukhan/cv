@@ -1,9 +1,9 @@
 import classNames from 'classnames';
-import React, { useState } from 'react';
+import React, { useState, PropsWithChildren } from 'react';
 import { isMobile } from 'react-device-detect';
 import Draggable from 'react-draggable';
 
-import { ConditionalWrapper } from '../';
+import { ConditionalWrapper } from '..';
 import styles from './styles.module.scss';
 
 const Z_INDEX_BASE = 5;
@@ -13,6 +13,25 @@ const MOBILE_START_POSITION = {
   x: 0,
   y: 0,
 };
+
+export type PassableProps = {
+  fullControl?: boolean;
+  maximizeOnStart?: boolean;
+  noBackdrop?: boolean;
+};
+
+type Props = PropsWithChildren<
+  {
+    icon: string;
+    dialogName: string;
+    onClick: (dialogName: string) => void;
+    onMinimize: (dialogName: string) => void;
+    onClose: (dialogName: string) => void;
+    isMinimized?: boolean;
+    isActive?: boolean;
+    index: number;
+  } & PassableProps
+>;
 
 function Dialog({
   children,
@@ -25,9 +44,9 @@ function Dialog({
   isActive,
   fullControl = true,
   maximizeOnStart = false,
-  noBackdrop,
+  noBackdrop = false,
   index,
-}) {
+}: Props) {
   const [isMaximized, setIsMaximized] = useState(isMobile ? true : maximizeOnStart);
   const [position, setPosition] = useState(isMobile ? MOBILE_START_POSITION : { x: 100, y: 100 });
   const [minimizedPosition, setMinimizedPosition] = useState({ x: 0, y: 0 });

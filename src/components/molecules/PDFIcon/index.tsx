@@ -6,7 +6,7 @@ import PDFIconBig from '../../../assets/images/pdf.png';
 import { DesktopIcon } from '../../templates';
 import styles from './styles.module.scss';
 
-function PDFIcon() {
+const PDFIcon = () => {
   const handleClick = () => {
     window.open(pdf);
   };
@@ -21,6 +21,6 @@ function PDFIcon() {
       />
     </div>
   );
-}
+};
 
 export default PDFIcon;

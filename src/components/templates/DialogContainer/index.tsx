@@ -1,10 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import { DialogType } from '../../../store/reducers/dialogReducer';
 import { closeDialog, minimizeDialog, setActive } from '../../../store/actions/dialogActions';
 import { Dialog } from '..';
 
-function DialogContainer({ dialogStack, activeDialog, closeDialog, minimizeDialog, setActive }) {
+type Props = {
+  dialogStack: DialogType[],
+  activeDialog: string,
+  closeDialog: typeof closeDialog,
+  minimizeDialog: typeof minimizeDialog,
+  setActive: typeof setActive, 
+}
+
+function DialogContainer({ dialogStack, activeDialog, closeDialog, minimizeDialog, setActive }: Props) {
   return dialogStack.map(({ icon, dialogName, isMinimized, children, props }, index) => (
     <Dialog
       icon={icon}

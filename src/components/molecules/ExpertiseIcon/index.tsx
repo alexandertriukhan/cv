@@ -5,15 +5,13 @@ import ExpertiseIconBig from '../../../assets/images/expertise.png';
 import { DialogContent } from '../../atoms';
 import { DesktopIcon } from '../../templates';
 
-function ExpertiseIcon() {
-  return (
-    <DesktopIcon
-      iconName="Areas of expertise"
-      iconSrc={ExpertiseIconBig}
-      dialogIconSrc={ExpertiseIconSmall}
-      dialogContent={<DialogContent mdFileName="expertise.md" className="dialog__body-variant" />}
-    />
-  );
-}
+const ExpertiseIcon = () => (
+  <DesktopIcon
+    iconName="Areas of expertise"
+    iconSrc={ExpertiseIconBig}
+    dialogIconSrc={ExpertiseIconSmall}
+    dialogContent={<DialogContent mdFileName="expertise.md" className="dialog__body-variant" />}
+  />
+);
 
 export default ExpertiseIcon;

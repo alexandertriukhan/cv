@@ -1,6 +1,14 @@
+import { ReactNode } from 'react';
 import * as TYPES from '../actionTypes/dialogActionTypes';
 
-export const openDialog = payload => ({
+export type OpenDialogActionPayloadType = {
+  icon: string,
+  dialogName: string,
+  children: ReactNode,
+  props: any,
+}
+
+export const openDialog = (payload: OpenDialogActionPayloadType) => ({
   type: TYPES.OPEN_DIALOG,
   payload,
 });

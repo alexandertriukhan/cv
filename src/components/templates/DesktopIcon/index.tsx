@@ -1,21 +1,26 @@
 import classNames from 'classnames';
-import PropTypes from 'prop-types';
-import React from 'react';
+import React, { ReactNode } from 'react';
+import { PassableProps as DialogProps } from '../Dialog';
 import { connect } from 'react-redux';
 
-import { openDialog } from '../../../store/actions/dialogActions';
+import { openDialog, OpenDialogActionPayloadType } from '../../../store/actions/dialogActions';
 import classes from './styles.module.scss';
 
 /**
  * Component renders a win98 styled Desktop Icon with attached Dialog
- *
- * @param {string} iconSrc
- * @param {string} iconName
- * @param {string} dialogIconSrc
- * @param {string} dialogName
- * @param {component} dialogContent
- * @param {function} openDialog
  */
+
+type Props = {
+  iconSrc: string;
+  iconName: string;
+  dialogIconSrc?: string;
+  dialogName?: string;
+  dialogContent?: ReactNode;
+  openDialog: (payload: OpenDialogActionPayloadType) => void;
+  invert?: boolean;
+  dialogProps?: DialogProps | {};
+  onClick?: () => void;
+};
 
 const DesktopIcon = ({
   iconSrc,
@@ -27,7 +32,7 @@ const DesktopIcon = ({
   invert,
   dialogProps = {},
   onClick = () => {},
-}) => {
+}: Props) => {
   const handleClick = () => {
     if (dialogContent) {
       openDialog({
@@ -49,12 +54,6 @@ const DesktopIcon = ({
       <span>{iconName}</span>
     </button>
   );
-};
-
-DesktopIcon.propTypes = {
-  iconSrc: PropTypes.string.isRequired,
-  iconName: PropTypes.string.isRequired,
-  dialogIconSrc: PropTypes.string,
 };
 
 const mapDispatchToProps = {

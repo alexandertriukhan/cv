@@ -1,11 +1,10 @@
 import classNames from 'classnames';
 import { marked } from 'marked';
-import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import sanitizeHtml from 'sanitize-html';
 
 import { fetchTextData } from '../../../api';
-import { Loader } from '../';
+import { Loader } from '..';
 
 const renderer = new marked.Renderer();
 const linkRenderer = renderer.link;
@@ -22,12 +21,14 @@ marked.setOptions({
 
 /**
  * Component make a request for markdown file and renders its content
- *
- * @param {string} mdFileName
- * @param {string} className
  */
 
-function DialogContent({ mdFileName, className }) {
+type Props = {
+  mdFileName: string;
+  className?: string;
+};
+
+function DialogContent({ mdFileName, className }: Props) {
   const [content, setContent] = useState();
 
   useEffect(() => {
@@ -46,10 +47,5 @@ function DialogContent({ mdFileName, className }) {
     <Loader />
   );
 }
-
-DialogContent.propTypes = {
-  mdFileName: PropTypes.string,
-  className: PropTypes.string,
-};
 
 export default DialogContent;

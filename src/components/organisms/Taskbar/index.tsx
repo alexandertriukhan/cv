@@ -8,7 +8,11 @@ import { DialogBar, StartButton, TimeBar } from '../../atoms';
 import { MyPcDialogContent } from '../../molecules/MyPcIcon';
 import styles from './styles.module.scss';
 
-function Taskbar({ openDialog }) {
+type Props = {
+  openDialog: typeof openDialog,
+}
+
+function Taskbar({ openDialog }: Props) {
   const handleStartClick = () => {
     openDialog({
       icon: pcIconSmall,

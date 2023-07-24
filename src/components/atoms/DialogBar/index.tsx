@@ -1,20 +1,22 @@
 import classNames from 'classnames';
-import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
 
 import { setActive } from '../../../store/actions/dialogActions';
 import styles from './styles.module.scss';
+import { DialogType } from '../../../store/reducers/dialogReducer';
 
 /**
  * Component renders a list of open dialogs inside a TaskBar
- *
- * @param {array} dialogStack
- * @param {string} activeDialog
- * @param {function} setActive
  */
 
-function DialogBar({ dialogStack, activeDialog, setActive }) {
+type Props = {
+  dialogStack: DialogType[];
+  activeDialog: string;
+  setActive: typeof setActive;
+};
+
+const DialogBar = ({ dialogStack, activeDialog, setActive }: Props) => {
   const modifyDialogButton = isActive => {
     return classNames(styles.dialogButton, isActive && styles['dialogButton_active']);
   };
@@ -29,12 +31,6 @@ function DialogBar({ dialogStack, activeDialog, setActive }) {
       {dialogName}
     </button>
   ));
-}
-
-DialogBar.propTypes = {
-  dialogStack: PropTypes.array.isRequired,
-  activeDialog: PropTypes.string,
-  setActive: PropTypes.func,
 };
 
 const mapDispatchToProps = {

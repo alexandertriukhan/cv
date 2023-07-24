@@ -5,10 +5,14 @@
     "prettier/prettier": "warn",
     "react-hooks/exhaustive-deps": "warn",
     "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error"
+    "simple-import-sort/exports": "error",
+    "no-case-declarations": "off"
   },
   "parserOptions": {
     "sourceType": "module",
     "ecmaVersion": 2018
+  },
+  "env": {
+    "browser": true
   }
 }
