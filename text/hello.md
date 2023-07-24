@@ -1,6 +1,7 @@
 #### Hello!
+
 My name is Alexander Triukhan. I am a frontend developer from Zaporizhzhya, Ukraine.
-I was first introduced to programming when I was 12 and had an opportunity to attend Pascal courses 
+I was first introduced to programming when I was 12 and had an opportunity to attend Pascal courses
 at school. That was the time when I became interested in coding and decided to tie my life with it!
 Today I am passioned with developing frontend applications with JS language using modern frontend frameworks
 and technologies.
