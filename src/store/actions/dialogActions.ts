@@ -13,17 +13,17 @@ export const openDialog = (payload: OpenDialogActionPayloadType) => ({
   payload,
 });
 
-export const closeDialog = dialogName => ({
+export const closeDialog = (dialogName: string) => ({
   type: TYPES.CLOSE_DIALOG,
   dialogName,
 });
 
-export const minimizeDialog = dialogName => ({
+export const minimizeDialog = (dialogName: string) => ({
   type: TYPES.MINIMIZE_DIALOG,
   dialogName,
 });
 
-export const setActive = dialogName => ({
+export const setActive = (dialogName: string) => ({
   type: TYPES.SET_ACTIVE,
   dialogName,
 });
