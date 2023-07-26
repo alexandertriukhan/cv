@@ -28,8 +28,8 @@
   &__body {
     height: 100%;
 
-    &--marginless {
-      margin: 0;
+    &--withMenu {
+      margin: 0 8px 8px 8px;
     }
   }
 }

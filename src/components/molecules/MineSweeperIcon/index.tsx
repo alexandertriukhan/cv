@@ -16,7 +16,17 @@ const MineSweeperIcon = () => (
       dialogProps={{
         fullControl: false,
         noBackdrop: true,
-        disableMargins: true,
+        headerMenuItems: [
+          {
+            name: 'Game',
+            menuItems: [
+              { name: 'New', isLastInSection: true },
+              { name: 'Beginner', isSelected: true },
+              { name: 'Intermediate', isSelected: false },
+              { name: 'Expert', isSelected: false },
+            ],
+          },
+        ],
       }}
     />
   </div>

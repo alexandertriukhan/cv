@@ -4,7 +4,6 @@ import { useTimer } from 'use-timer';
 import { DIFFICULTIES } from './constants';
 import initField from './initField';
 import MineSweeperField from './molecules/MineSweeperField';
-import { MenuOption } from '../../atoms';
 import classes from './styles.module.scss';
 
 const pickEmoji = (isLose: boolean, isWin: boolean) => {
@@ -20,7 +19,6 @@ const pickEmoji = (isLose: boolean, isWin: boolean) => {
 const INITIAL_DIFFICULTY = DIFFICULTIES.BEGINNER;
 
 function MineSweeperGame() {
-  const [isGameMenuOpened, setIsGameMenuOpened] = useState(false);
   const [gameWon, setGameWon] = useState(false);
   const [gameLost, setGameLost] = useState(false);
   const [selectedDifficulty, setSelectedDifficulty] = useState(INITIAL_DIFFICULTY);
@@ -66,15 +64,8 @@ function MineSweeperGame() {
     }
   };
 
-  const handleOpenMenu = () => {
-    setIsGameMenuOpened(true);
-  };
-
   return (
     <div className={classes.mineSweeper}>
-      <div className={classes.header}>
-        <MenuOption text="Game" onClick={handleOpenMenu} isPressed={isGameMenuOpened} />
-      </div>
       <div className={classes.gameStatus}>
         <div>{fieldSettings.totalMines}</div>
         <div>

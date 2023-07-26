@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+}
+
+.menuItem {
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    left: 0;
+    top: 18px;
+}
+
+.separator {
+    width: 100%;
+    border-bottom: 1px solid #808080;
+    margin: 2px 0;
+}

@@ -17,6 +17,8 @@ marked.setOptions({
   gfm: true,
   breaks: true,
   renderer,
+  mangle: false,
+  headerIds: false,
 });
 
 /**
