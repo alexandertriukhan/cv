@@ -85,7 +85,7 @@ function MineSweeperTile({
       <div className={classes.value}>
         <MineSweeperTileValue value={value} hasMine={hasMine} noMine={noMine} />
       </div>
-      {marked && <div className={classes.flag}>🚩</div>}
+      {marked && !noMine && <div className={classes.flag}>🚩</div>}
     </div>
   );
 }
