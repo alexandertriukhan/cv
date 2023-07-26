@@ -1,5 +1,4 @@
 import classNames from 'classnames';
-import React from 'react';
 import { connect } from 'react-redux';
 
 import { setActive } from '../../../store/actions/dialogActions';
@@ -17,7 +16,7 @@ type Props = {
 };
 
 const DialogBar = ({ dialogStack, activeDialog, setActive }: Props) => {
-  const modifyDialogButton = isActive => {
+  const modifyDialogButton = (isActive: boolean) => {
     return classNames(styles.dialogButton, isActive && styles['dialogButton_active']);
   };
 

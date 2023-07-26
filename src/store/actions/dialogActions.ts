@@ -27,3 +27,7 @@ export const setActive = (dialogName: string) => ({
   type: TYPES.SET_ACTIVE,
   dialogName,
 });
+
+export const setInactive = () => ({
+  type: TYPES.SET_INACTIVE,
+});

@@ -1,7 +1,8 @@
 import classNames from 'classnames';
-import React, { useState, PropsWithChildren } from 'react';
+import { useState, PropsWithChildren, useRef } from 'react';
 import { isMobile } from 'react-device-detect';
 import Draggable from 'react-draggable';
+import useOutsideClick from '../../../hooks/useOutsideClick';
 
 import { ConditionalWrapper } from '..';
 import styles from './styles.module.scss';
@@ -18,6 +19,7 @@ export type PassableProps = {
   fullControl?: boolean;
   maximizeOnStart?: boolean;
   noBackdrop?: boolean;
+  disableMargins?: boolean;
 };
 
 type Props = PropsWithChildren<
@@ -27,6 +29,7 @@ type Props = PropsWithChildren<
     onClick: (dialogName: string) => void;
     onMinimize: (dialogName: string) => void;
     onClose: (dialogName: string) => void;
+    onOutsideClick: () => void;
     isMinimized?: boolean;
     isActive?: boolean;
     index: number;
@@ -40,26 +43,25 @@ function Dialog({
   onClick,
   onMinimize,
   onClose,
+  onOutsideClick,
   isMinimized,
   isActive,
   fullControl = true,
   maximizeOnStart = false,
   noBackdrop = false,
+  disableMargins = false,
   index,
 }: Props) {
+  const dialogRef = useRef(null);
   const [isMaximized, setIsMaximized] = useState(isMobile ? true : maximizeOnStart);
   const [position, setPosition] = useState(isMobile ? MOBILE_START_POSITION : { x: 100, y: 100 });
   const [minimizedPosition, setMinimizedPosition] = useState({ x: 0, y: 0 });
 
-  function modifyDialog() {
-    return classNames(
-      'window',
-      styles.dialog,
-      isMinimized && styles['dialog--minimized'],
-      isMaximized && styles['dialog--maximized'],
-      isActive && styles['dialog--active'],
-    );
-  }
+  const handleOutsideClick = () => {
+    isActive && onOutsideClick();
+  };
+
+  useOutsideClick(dialogRef, handleOutsideClick);
 
   const handleMinimize = e => {
     e.stopPropagation();
@@ -82,7 +84,7 @@ function Dialog({
     onClose(dialogName);
   };
 
-  const onStopDrag = (e, position) => {
+  const onStopDrag = (e, position: { x: number; y: number }) => {
     e.preventDefault();
     e.stopPropagation();
     setPosition({ x: position.x, y: position.y });
@@ -97,11 +99,18 @@ function Dialog({
       cancel=".no-drag"
     >
       <div
-        className={modifyDialog()}
+        className={classNames(
+          'window',
+          styles.dialog,
+          isMinimized && styles['dialog--minimized'],
+          isMaximized && styles['dialog--maximized'],
+          isActive && styles['dialog--active'],
+        )}
         onClick={() => onClick(dialogName)}
         style={{
           zIndex: isActive ? Z_INDEX_BASE + index + Z_INDEX_ACTIVE_MODIFIER : Z_INDEX_BASE + index,
         }}
+        ref={dialogRef}
       >
         <div className="title-bar">
           <div className={classNames('title-bar-text', styles.titleBarText)}>
@@ -118,7 +127,13 @@ function Dialog({
             <button className="no-drag" aria-label="Close" onClick={handleClose} />
           </div>
         </div>
-        <div className={classNames('window-body', styles.dialog__body)}>
+        <div
+          className={classNames(
+            'window-body',
+            styles.dialog__body,
+            disableMargins && styles['dialog__body--marginless'],
+          )}
+        >
           <ConditionalWrapper
             condition={!noBackdrop}
             wrapper={children => <div className={styles.dialog__backdrop}>{children}</div>}

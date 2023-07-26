@@ -1,11 +1,36 @@
 import classNames from 'classnames';
-import React from 'react';
 
 import MineImg from '../../../../../assets/icons/mine.png';
+import NoMineImg from '../../../../../assets/icons/noMine.png';
 import { FIELDS_SIZE } from '../../constants';
 import classes from './styles.module.scss';
 
-function MineSweeperTileValue({ value }) {
+type Props = {
+  hasMine?: boolean;
+  value?: number;
+  onClick: (hasMine: boolean) => void;
+  onMarkMine: () => void;
+  uncovered: boolean;
+  marked?: boolean;
+  noMine?: boolean;
+};
+
+// TODO: move to separate component
+type MineSweeperTileValueProps = {
+  value?: number;
+  hasMine?: boolean;
+  noMine?: boolean;
+};
+
+function MineSweeperTileValue({ value, hasMine, noMine }: MineSweeperTileValueProps) {
+  if (noMine) {
+    return <img src={NoMineImg} alt="" />;
+  }
+
+  if (hasMine) {
+    return <img src={MineImg} alt="" />;
+  }
+
   let color;
   switch (value) {
     case 2:
@@ -20,26 +45,47 @@ function MineSweeperTileValue({ value }) {
   return value ? <span style={{ color: color }}>{value}</span> : null;
 }
 
-function MineSweeperTile({ hasMine = false, value, onClick, uncovered }) {
-  const modifyMineSweeperField = () => {
-    return classNames(
-      !uncovered && 'window',
-      classes.mineSweeperTile,
-      uncovered && classes['mineSweeperTile--uncovered'],
-    );
+function MineSweeperTile({
+  hasMine = false,
+  value,
+  onClick,
+  onMarkMine,
+  uncovered,
+  marked,
+  noMine,
+}: Props) {
+  const isGuessedMine = marked && !noMine && uncovered;
+
+  const handleClick = (e: any) => {
+    if (!marked) {
+      onClick(hasMine);
+    }
   };
 
-  const handleClick = () => {
-    onClick(hasMine);
+  const handleRightClick = (e: any) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (!uncovered) {
+      onMarkMine();
+    }
   };
 
   return (
     <div
-      className={modifyMineSweeperField()}
+      className={classNames(
+        (!uncovered || isGuessedMine) && 'window',
+        classes.mineSweeperTile,
+        uncovered && classes['mineSweeperTile--uncovered'],
+        isGuessedMine && classes['mineSweeperTile--guessed'],
+      )}
       onClick={handleClick}
+      onContextMenu={handleRightClick}
       style={{ width: FIELDS_SIZE, height: FIELDS_SIZE }}
     >
-      <div>{hasMine ? <img src={MineImg} alt="" /> : <MineSweeperTileValue value={value} />}</div>
+      <div className={classes.value}>
+        <MineSweeperTileValue value={value} hasMine={hasMine} noMine={noMine} />
+      </div>
+      {marked && <div className={classes.flag}>🚩</div>}
     </div>
   );
 }

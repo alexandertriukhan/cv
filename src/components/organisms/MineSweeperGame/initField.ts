@@ -1,4 +1,4 @@
-export default function initField(nCols, nRows, mines) {
+export default function initField(nCols: number, nRows: number, mines: number) {
   const field = new Array(nCols).fill(null).map(() =>
     new Array(nRows).fill(null).map(() => ({
       hasMine: false,
@@ -42,7 +42,7 @@ function initValues(field) {
   return result;
 }
 
-export function getNeighboringTiles(cols, rows, i, j) {
+export function getNeighboringTiles(cols: number, rows: number, i: number, j: number) {
   const neighbors = [];
   if (i > 0 && j > 0) {
     neighbors.push({ x: i - 1, y: j - 1 });

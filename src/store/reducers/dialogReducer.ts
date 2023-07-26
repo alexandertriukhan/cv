@@ -45,12 +45,6 @@ export default function dialogReducer(state = initialState, action) {
         dialogStack: state.dialogStack.map(dialog =>
           dialog.dialogName === action.dialogName ? { ...dialog, isMinimized: true } : dialog,
         ),
-        // TODO: don't make active if it is minimized
-        // The issue is previous dialog might not be -1 or -2 whatever, it might be in the middle
-        activeDialog:
-          state.dialogStack.length > 1
-            ? state.dialogStack[state.dialogStack.length - 2].dialogName
-            : null,
       };
 
     case TYPES.CLOSE_DIALOG:
@@ -60,9 +54,6 @@ export default function dialogReducer(state = initialState, action) {
       return {
         ...state,
         dialogStack: newDialogStack,
-        activeDialog: newDialogStack[newDialogStack.length - 1]
-          ? newDialogStack[newDialogStack.length - 1].dialogName
-          : null,
       };
 
     case TYPES.SET_ACTIVE:
@@ -72,6 +63,12 @@ export default function dialogReducer(state = initialState, action) {
           dialog.dialogName === action.dialogName ? { ...dialog, isMinimized: false } : dialog,
         ),
         activeDialog: action.dialogName,
+      };
+
+    case TYPES.SET_INACTIVE:
+      return {
+        ...state,
+        activeDialog: null,
       };
 
     default:

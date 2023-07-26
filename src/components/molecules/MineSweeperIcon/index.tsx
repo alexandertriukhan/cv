@@ -16,6 +16,7 @@ const MineSweeperIcon = () => (
       dialogProps={{
         fullControl: false,
         noBackdrop: true,
+        disableMargins: true,
       }}
     />
   </div>

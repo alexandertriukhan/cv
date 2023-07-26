@@ -1,14 +1,33 @@
 import * as TYPES from '../actionTypes/fieldActionTypes';
 
-export default function fieldReducer(state, action) {
+export type CellType = {
+  uncovered: boolean;
+  value?: number;
+  marked?: boolean;
+  hasMine?: boolean;
+  noMine?: boolean;
+}
+
+export default function fieldReducer(state: CellType[][], action) {
   switch (action.type) {
     case TYPES.SET_UNCOVERED:
       return state.map((col, colIndex) =>
-        col.map((row, rowIndex) => {
-          if (colIndex === action.indexColumn && rowIndex === action.index) {
-            return { ...row, uncovered: true };
+        col.map((cell, cellIndex) => {
+          if (colIndex === action.indexColumn && cellIndex === action.index && !cell.marked) {
+            return { ...cell, uncovered: true };
           } else {
-            return row;
+            return cell;
+          }
+        }),
+      );
+
+    case TYPES.MARK_MINE:
+      return state.map((col, colIndex) =>
+        col.map((cell, cellIndex) => {
+          if (colIndex === action.indexColumn && cellIndex === action.index) {
+            return { ...cell, marked: !cell.marked };
+          } else {
+            return cell;
           }
         }),
       );
@@ -17,7 +36,7 @@ export default function fieldReducer(state, action) {
       return action.payload;
 
     case TYPES.UNCOVER_ALL:
-      return state.map(col => col.map(row => ({ ...row, uncovered: true })));
+      return state.map(col => col.map(cell => ({ ...cell, uncovered: true, noMine: cell.marked && !cell.hasMine })));
 
     default:
       return state;

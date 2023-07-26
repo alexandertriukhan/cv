@@ -4,27 +4,34 @@
   cursor: pointer;
   font-weight: 700;
   padding: 0;
-
-  > div {
-    display: none;
-    background-color: $bg_gray;
-    border: 1px dotted gray;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-  }
+  user-select: none;
 
   img {
     width: 12px;
     height: 12px;
   }
 
-  &--uncovered {
-
-    > div {
+  &--uncovered:not(&--guessed) {
+    > .value {
       display: flex;
     }
   }
+}
+
+.flag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.value {
+  display: none;
+  background-color: $bg_gray;
+  border: 1px dotted gray;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }

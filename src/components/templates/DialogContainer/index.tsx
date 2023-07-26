@@ -1,20 +1,32 @@
-import React from 'react';
 import { connect } from 'react-redux';
 
 import { DialogType } from '../../../store/reducers/dialogReducer';
-import { closeDialog, minimizeDialog, setActive } from '../../../store/actions/dialogActions';
+import {
+  closeDialog,
+  minimizeDialog,
+  setActive,
+  setInactive,
+} from '../../../store/actions/dialogActions';
 import { Dialog } from '..';
 
 type Props = {
-  dialogStack: DialogType[],
-  activeDialog: string,
-  closeDialog: typeof closeDialog,
-  minimizeDialog: typeof minimizeDialog,
-  setActive: typeof setActive, 
-}
+  dialogStack: DialogType[];
+  activeDialog: string;
+  closeDialog: typeof closeDialog;
+  minimizeDialog: typeof minimizeDialog;
+  setActive: typeof setActive;
+  setInactive: typeof setInactive;
+};
 
-function DialogContainer({ dialogStack, activeDialog, closeDialog, minimizeDialog, setActive }: Props) {
-  return dialogStack.map(({ icon, dialogName, isMinimized, children, props }, index) => (
+const DialogContainer = ({
+  dialogStack,
+  activeDialog,
+  closeDialog,
+  minimizeDialog,
+  setActive,
+  setInactive,
+}: Props) =>
+  dialogStack.map(({ icon, dialogName, isMinimized, children, props }, index) => (
     <Dialog
       icon={icon}
       dialogName={dialogName}
@@ -22,6 +34,7 @@ function DialogContainer({ dialogStack, activeDialog, closeDialog, minimizeDialo
       onClick={setActive}
       onClose={closeDialog}
       onMinimize={minimizeDialog}
+      onOutsideClick={setInactive}
       isMinimized={isMinimized}
       isActive={activeDialog === dialogName}
       index={index}
@@ -30,12 +43,12 @@ function DialogContainer({ dialogStack, activeDialog, closeDialog, minimizeDialo
       {children}
     </Dialog>
   ));
-}
 
 const mapDispatchToProps = {
   closeDialog,
   minimizeDialog,
   setActive,
+  setInactive,
 };
 
 const mapStateToProps = state => ({

@@ -1,4 +1,14 @@
 .mineSweeper {
+  margin: 0 8px 8px 8px;
+
+  .header {
+    display: flex;
+  }
+
+  .gameBtn {
+    cursor: pointer;
+    padding: 4px 0;
+  }
 
   .gameStatus {
     box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf,

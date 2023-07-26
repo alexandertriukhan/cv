@@ -1,5 +1,6 @@
 {
-  "name": "cv2",
+  "homepage": "https://alexandertriukhan.github.io/cv",
+  "name": "cv",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
