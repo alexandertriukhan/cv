@@ -17,7 +17,7 @@ const pickEmoji = (isLose: boolean, isWin: boolean) => {
   return '🙂';
 };
 
-const INITIAL_DIFFICULTY = DIFFICULTIES[DifficultiesEnum.TEST];
+const INITIAL_DIFFICULTY = DIFFICULTIES[DifficultiesEnum.BEGINNER];
 
 const MineSweeperGame = () => {
   const [gameWon, setGameWon] = useState(false);
