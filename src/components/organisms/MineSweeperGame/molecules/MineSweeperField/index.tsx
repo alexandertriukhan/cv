@@ -1,7 +1,11 @@
 import { memo, useEffect, useReducer, useRef } from 'react';
 
 import { markMine, setField, uncoverAll } from '../../../../../store/actions/fieldAction';
-import { MARK_MINE, SET_UNCOVERED } from '../../../../../store/actionTypes/fieldActionTypes';
+import {
+  MARK_MINE,
+  SET_UNCOVERED,
+  UNCOVER_ALL,
+} from '../../../../../store/actionTypes/fieldActionTypes';
 import fieldReducer, { CellType } from '../../../../../store/reducers/fieldReducer';
 import MineSweeperTile from '../../atoms/MineSweeperTile';
 import { FIELDS_SIZE } from '../../constants';
@@ -65,6 +69,9 @@ function MineSweeperField({ onWin, onLose, fieldSettings }: Props) {
       }
     }
     if (revealed.current === fieldSettings.cols * fieldSettings.rows - fieldSettings.totalMines) {
+      tmpField.current = fieldReducer(tmpField.current, {
+        type: UNCOVER_ALL,
+      });
       onWin();
     }
   };

@@ -1,5 +1,3 @@
-import React from 'react';
-
 import mineSweeperIconSmall from '../../../assets/icons/mine.png';
 import mineSweeperIcon from '../../../assets/images/minesweeper.png';
 import { MineSweeperGame } from '../../organisms';
@@ -16,17 +14,7 @@ const MineSweeperIcon = () => (
       dialogProps={{
         fullControl: false,
         noBackdrop: true,
-        headerMenuItems: [
-          {
-            name: 'Game',
-            menuItems: [
-              { name: 'New', isLastInSection: true },
-              { name: 'Beginner', isSelected: true },
-              { name: 'Intermediate', isSelected: false },
-              { name: 'Expert', isSelected: false },
-            ],
-          },
-        ],
+        withMenu: true,
       }}
     />
   </div>

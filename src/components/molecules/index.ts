@@ -7,6 +7,7 @@ import MyPcIcon from './MyPcIcon';
 import PDFIcon from './PDFIcon';
 import RecycleBinIcon from './RecycleBinIcon';
 import SoftSkillsIcon from './SoftSkillsIcon';
+import HeaderMenu from './HeaderMenu/HeaderMenu';
 
 export {
   EducationIcon,
@@ -18,4 +19,5 @@ export {
   PDFIcon,
   RecycleBinIcon,
   SoftSkillsIcon,
+  HeaderMenu,
 };

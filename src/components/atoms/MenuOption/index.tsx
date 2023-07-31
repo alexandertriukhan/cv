@@ -7,9 +7,10 @@ type Props = {
   onClick?: () => void;
   isPressed?: boolean;
   isInternalMenu?: boolean;
+  isSelected?: boolean;
 };
 
-const MenuOption = ({ text, isPressed, isInternalMenu, onClick }: Props) => {
+const MenuOption = ({ text, isPressed, isInternalMenu, onClick, isSelected }: Props) => {
   const textArray = Array.from(text);
 
   const handleClick = () => {
@@ -25,6 +26,11 @@ const MenuOption = ({ text, isPressed, isInternalMenu, onClick }: Props) => {
       )}
       onClick={handleClick}
     >
+      {isSelected ? (
+        <div className={styles.mark}>✓</div>
+      ) : (
+        isInternalMenu && <div className={styles.markPlace} />
+      )}
       <div className={styles.capital}>{String(textArray[0])}</div>
       <div>{textArray.slice(1).join('')}</div>
     </div>

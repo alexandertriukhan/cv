@@ -52,12 +52,13 @@ const HeaderMenu = ({ items }: Props) => {
           />
           {activeMenu === name && (
             <div ref={menuRef} className={classNames('window', styles.menu)}>
-              {menuItems.map(({ name, onClick, isLastInSection }) => (
+              {menuItems.map(({ name, onClick, isLastInSection, isSelected }) => (
                 <div key={name}>
                   <MenuOption
                     text={name}
                     onClick={() => handleInnerMenuClick(onClick)}
                     isInternalMenu
+                    isSelected={isSelected}
                   />
                   {isLastInSection && <div className={styles.separator} />}
                 </div>

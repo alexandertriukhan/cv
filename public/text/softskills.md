@@ -1,6 +1,6 @@
 #### EXTRA SKILLS AND HOBBIES
 
-- Driving license: category B (6 years of driving experience)
+- Driving license: category B (10 years of driving experience)
 - **Ex-musician**: recorded an album, toured for 2 years. Currently playing in another band.
 - Photography: predominantly analog.
 - **Game development**: I struggled a lot through the years but haven't done much progress here, hehe.

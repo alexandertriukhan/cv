@@ -32,6 +32,10 @@
       margin: 0 8px 8px 8px;
     }
   }
+
+  &--noControl {
+    max-width: 100%;
+  }
 }
 
 .titleBarText {

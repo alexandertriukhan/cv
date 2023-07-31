@@ -3,11 +3,9 @@ import { useState, PropsWithChildren, useRef } from 'react';
 import { isMobile } from 'react-device-detect';
 import Draggable from 'react-draggable';
 import useOutsideClick from '../../../hooks/useOutsideClick';
-import { Props as HeaderMenuProps } from '../../molecules/HeaderMenu';
 
 import { ConditionalWrapper } from '..';
 import styles from './styles.module.scss';
-import HeaderMenu from '../../molecules/HeaderMenu/HeaderMenu';
 
 const Z_INDEX_BASE = 5;
 const Z_INDEX_ACTIVE_MODIFIER = 5;
@@ -21,7 +19,7 @@ export type PassableProps = {
   fullControl?: boolean;
   maximizeOnStart?: boolean;
   noBackdrop?: boolean;
-  headerMenuItems?: HeaderMenuProps;
+  withMenu?: boolean;
 };
 
 type Props = PropsWithChildren<
@@ -51,7 +49,7 @@ function Dialog({
   fullControl = true,
   maximizeOnStart = false,
   noBackdrop = false,
-  headerMenuItems,
+  withMenu,
   index,
 }: Props) {
   const dialogRef = useRef(null);
@@ -107,6 +105,7 @@ function Dialog({
           isMinimized && styles['dialog--minimized'],
           isMaximized && styles['dialog--maximized'],
           isActive && styles['dialog--active'],
+          !fullControl && styles['dialog--noControl'],
         )}
         onClick={() => onClick(dialogName)}
         style={{
@@ -133,10 +132,9 @@ function Dialog({
           className={classNames(
             'window-body',
             styles.dialog__body,
-            Boolean(headerMenuItems) && styles['dialog__body--withMenu'],
+            withMenu && styles['dialog__body--withMenu'],
           )}
         >
-          {Boolean(headerMenuItems) && <HeaderMenu items={headerMenuItems} />}
           <ConditionalWrapper
             condition={!noBackdrop}
             wrapper={children => <div className={styles.dialog__backdrop}>{children}</div>}

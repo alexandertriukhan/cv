@@ -11,14 +11,16 @@ const Main = () => {
 
   return (
     <Provider store={store}>
-      <ConditionalWrapper
-        condition={isMobile}
-        wrapper={children => <Div100vh>{children}</Div100vh>}
-        falsyWrapper={children => <div style={{ height: '100vh' }}>{children}</div>}
-      >
-        <Desktop />
-        <Taskbar />
-      </ConditionalWrapper>
+      <div style={{ overflow: 'hidden' }}>
+        <ConditionalWrapper
+          condition={isMobile}
+          wrapper={children => <Div100vh>{children}</Div100vh>}
+          falsyWrapper={children => <div style={{ height: '100vh' }}>{children}</div>}
+        >
+          <Desktop />
+          <Taskbar />
+        </ConditionalWrapper>
+      </div>
     </Provider>
   );
 };

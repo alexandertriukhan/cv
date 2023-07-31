@@ -39,6 +39,15 @@ function MineSweeperTileValue({ value, hasMine, noMine }: MineSweeperTileValuePr
     case 3:
       color = 'red';
       break;
+    case 4:
+      color = 'darkblue';
+      break;
+    case 5:
+      color = 'darkred';
+      break;
+    case 6:
+      color = 'darkgreen';
+      break;
     default:
       color = 'green';
   }

@@ -1,7 +1,19 @@
 #### JOB EXPERIENCE
 
+**Wargaming.net**, _Software Engineer_
+November 2021 - Present
+
+I am currently working as a Frontend/Gameplay developer on the [World of Tanks](https://store.steampowered.com/app/1407200/World_of_Tanks/), game played by ~**160** million people.
+As a part of dedicated **PVE**-specialised team I work on delivering the best and most-optimised UI/gameplay elements for beloved by players in-game events (like Mirny-13, Halloween 2022 etc.) as well as contributing to technical stack of the company. One of major additions I made is an introduction of system, which provides ability to format dates into UX-approved localized formats (in more than 30 languages, including the trickiest ones like Chinese, Turkish, Korean etc.). And all this is available accross Python, C++, Scaleform and Gameface technologies!
+
+**Stack of technologies and methods:**
+
+- Coherent Labs Gameface
+- React
+- Python
+
 **S-PRO**, _Frontend Engineer_
-March 2019 - present
+March 2019 - October 2021
 
 **Notable Projects:**
 
